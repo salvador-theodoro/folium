@@ -15,3 +15,17 @@ carousels.forEach(carousel => {
     });
 
 })
+
+
+
+const profileButton = document.getElementById('profile-button');
+const dropdown = document.getElementById('profile-dropdown-menu');
+
+profileButton.addEventListener('click', (e) => {
+    e.stopPropagation(); // evita que o clique feche imediatamente o menu
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+});
+
+document.addEventListener('click', () => {
+    dropdown.style.display = 'none';
+});

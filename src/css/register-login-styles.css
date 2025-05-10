@@ -1,0 +1,41 @@
+body{
+    align-items: center;
+}
+
+/*---------------------CAIXA FORMULÁRIO LOGIN/REGISTRO-----------------------*/
+
+main{
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid;
+}
+
+.main-content{
+    text-align: center;
+}
+
+.main-content h1{
+}
+
+.login-box{
+    width: 400px;
+    height: fit-content;
+    border: 1px solid;
+    margin: auto;
+}
+
+.login-box input{
+    width: 250px;
+    margin-top: 20px;
+}
+
+.login-box input.submit{
+    margin-bottom: 50px;
+}
+
+.login-box form{
+    text-align: center;
+}
