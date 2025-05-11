@@ -6,6 +6,7 @@
     <title>Página Inicial</title>
     <link rel="stylesheet" href="./src/css/global-styles.css">
     <link rel="stylesheet" href="./src/css/home-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -21,39 +22,34 @@
                 </div>
             </div>
             <div class="header-right-side">
-                <!--BOTÃO NOTIFICAÇÕES-->
-                <div class="notification-button">
-                    <a href="">
-                        <img src="" alt="" class="notification-button-icon">
-                    </a>
-                </div>
-                <!--BOTÃO PERFIL-->
-                <div class="profile-button">
-                <button id="profile-button"></button>
+                <!--BOTÃO AJUDA-->
+                <div class="help-button">
+                    <button id="help-button"><span class="fa-solid fa-question"></span></button>
                 </div>
                 <!--BOTÃO CONFIG-->
                 <div class="config-button">
-                    <a href="">
-                        <img src="" alt="" class="config-button-icon">
-                    </a>
+                    <button id="config-button"><span class="fa-solid fa-gear"></span></button>
                 </div>
-                <!--BOTÃO AJUDA-->
-                <div class="help-button">
-                    <a href="">
-                        <img src="" alt="" class="help-button-icon">
-                    </a>
+                <!--BOTÃO NOTIFICAÇÕES-->
+                <div class="notification-button">
+                    <button id="notification-button"><span class="fa-regular fa-bell"></span></button>
+                </div>
+                <!--BOTÃO PERFIL-->
+                <div class="profile-button">
+                    <button id="profile-button"><span class="fa-solid fa-circle-user"></span></button>
                 </div>
                 <!--BOTÃO TEMA-->
                 <div class="theme-button">
-                    <button id="theme-button">
-                        <img src="" alt="" class="theme-button-icon">
-                    </button>
+                    <button id="theme-button"><span class="fa-solid fa-lightbulb"></span></button>
                 </div>
             </div>
         </div>
     </header>
     <!--MENU DROPDOWN-->
     <section class="dropdown-menu-section">
+        <div class="dropdown-menu hidden" id="notification-dropdown-menu">
+            oii
+        </div>
         <div class="dropdown-menu hidden" id="profile-dropdown-menu">
             <ul>
                 <li><a href="register-page.html">Registrar</a></li>

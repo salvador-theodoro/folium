@@ -17,15 +17,29 @@ carousels.forEach(carousel => {
 })
 
 
-
+//MENU DROPDOWN PROFILE
 const profileButton = document.getElementById('profile-button');
-const dropdown = document.getElementById('profile-dropdown-menu');
+const profileDropdown = document.getElementById('profile-dropdown-menu');
 
 profileButton.addEventListener('click', (e) => {
     e.stopPropagation(); // evita que o clique feche imediatamente o menu
-    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    profileDropdown.style.display = profileDropdown.style.display === 'block' ? 'none' : 'block';
 });
 
 document.addEventListener('click', () => {
-    dropdown.style.display = 'none';
+    profileDropdown.style.display = 'none';
+});
+
+
+//MENU DROPDOWN NOTIFICATION
+const notifcationButton = document.getElementById('notification-button');
+const notificationDropdown = document.getElementById('notification-dropdown-menu');
+
+notificationButton.addEventListener('click', (e) => {
+    e.stopPropagation(); // evita que o clique feche imediatamente o menu
+    notificationDropdown.style.display = notificationDropdown.style.display === 'block' ? 'none' : 'block';
+});
+
+document.addEventListener('click', () => {
+    notificationDropdown.style.display = 'none';
 });

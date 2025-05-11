@@ -34,8 +34,8 @@ header{
     align-items: center;
 }
 
-.header-logo img{
-    height: 60px;
+.header-logo img.logo-title{
+    margin-bottom: 12px;
 }
 
 .header-right-side{
