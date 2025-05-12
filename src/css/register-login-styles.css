@@ -1,6 +1,17 @@
-body{
-    padding-top: 55px;
-    background-color: #f3f3f3;
+/* Aplica a porra da fonte no site todo */
+* {
+  font-family: "Ligconsolata", sans-serif;
+  font-weight: bold; /* 'sans-serif' como fallback se a Ligconsolata não funfar */
+}
+
+/* Corpos e fundo */
+body {
+  font-family: "Ligconsolata", sans-serif;
+  margin: 0;
+  background-color: #e4e4e4;
+  background: url("../img/icons/fundo33.png") no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden; /* Impede o scroll */
 }
 
 /*----------------------------------HEADER------------------------------------*/
@@ -10,16 +21,18 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    height: 50px;
+    height: 65px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px;
     position: fixed;
-    background-color: #222222;
+    background-color: #f7f7f7;
 }
 
 .header-content{
+    margin-left: 10px;
+    margin-right: 10px;
     width: 100%;
     height: 50px;
     display: flex;
@@ -56,7 +69,7 @@ header{
 .login-page-button{
     padding: 7px 12px;
     border-radius: 50px;
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
 .login-page-button a{
@@ -73,22 +86,29 @@ header{
 /*--------------------------MAIN--------------------------*/
 
 main{
-    width: 100%;
-    height: 100%;
+/* Adicionando Flexbox para centralizar o conteúdo */
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100vh; /* Garante que a altura seja 100% da altura da janela */
+  width: 100%;
+  margin: 0; /* Remove margens padrão */
 }
 
 .main-content{
     display: flex;
     flex-direction: row;
+    gap: 250px;
+    margin-right: 150px;
 }
 
 .main-left-side{
     width: 50%;
+    color: #fff;
 }
 
 .main-left-side .span-box{
     width: 400px;
-    margin: auto;
     margin-top: 15%;
 }
 
@@ -132,8 +152,8 @@ main{
     flex-direction: column;
     padding: 5px 30px 15px 30px;
     text-align: center;
-    background-color: #323232;
-    color: #fff;
+    background-color: #f7f7f7;
+    color: #000000;
 }
 
 .form-title{
@@ -167,7 +187,7 @@ main{
 
 .form-box form span a{
     margin: auto;
-    color: #fff;
+    color: #000000;
 }
 
 .submit-button-box{
@@ -180,7 +200,7 @@ main{
     height: 40px;
     border: none;
     border-radius: 50px;
-    color: #fff;
+    color: #ffffff;
     background-color: #8752D2;
 }
 
@@ -221,9 +241,9 @@ main{
 }
 
 .terms a{
-    color: #fff;
+    color: #000000;
 }
 
 .redirect a{
-    color: #fff;
+    color: #000000;
 }
