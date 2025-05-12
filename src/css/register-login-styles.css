@@ -61,7 +61,7 @@ header{
 }
 
 .header-content a{
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     font-size: 15px;
 }
@@ -69,7 +69,7 @@ header{
 .login-page-button{
     padding: 7px 12px;
     border-radius: 50px;
-    background-color: #ffffff;
+    background-color: #c5c5c5;
 }
 
 .login-page-button a{
