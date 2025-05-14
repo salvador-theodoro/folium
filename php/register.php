@@ -36,6 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($stmt->execute()) {
         echo "Cadastro realizado com sucesso!";
+        header("Location: ../login-page.html");
     } else {
         echo "Erro: " . $stmt->error;
     }

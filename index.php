@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -52,8 +56,13 @@
         </div>
         <div class="dropdown-menu hidden" id="profile-dropdown-menu">
             <ul>
-                <li><a href="register-page.html">Registrar</a></li>
-                <li><a href="login-page.html">Entrar</a></li>
+                <?php if (isset($_SESSION['user_nome'])): ?>
+                    <li><strong><?php echo htmlspecialchars($_SESSION['user_nome']); ?></strong></li>
+                    <li><a href="php/logout.php">Sair</a></li>
+                <?php else: ?>
+                    <li><a href="register-page.html">Registrar</a></li>
+                    <li><a href="login-page.html">Entrar</a></li>
+                <?php endif; ?>
             </ul>
         </div>
     </section>
