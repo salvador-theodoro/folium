@@ -10,6 +10,7 @@ session_start();
     <title>Página Inicial</title>
     <link rel="stylesheet" href="./src/css/global-styles.css">
     <link rel="stylesheet" href="./src/css/home-styles.css">
+    <link rel="stylesheet" href="./src/css/standard-header.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -17,7 +18,7 @@ session_start();
         <div class="header-content">
             <div class="header-left-side">
                 <div class="home-button">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img src="./src/img/icons/logo1.png" alt="" class="home-button-icon" height="40px">
                     </a>
                 </div>
@@ -57,7 +58,9 @@ session_start();
         <div class="dropdown-menu hidden" id="profile-dropdown-menu">
             <ul>
                 <?php if (isset($_SESSION['user_nome'])): ?>
-                    <li><strong><?php echo htmlspecialchars($_SESSION['user_nome']); ?></strong></li>
+                    <a href="profile-page.html">
+                    <li id="user-name"><strong><?php echo htmlspecialchars($_SESSION['user_nome']); ?></strong></li>
+                    </a>
                     <li><a href="php/logout.php">Sair</a></li>
                 <?php else: ?>
                     <li><a href="register-page.html">Registrar</a></li>
@@ -81,27 +84,67 @@ session_start();
                         <div class="section-blocks-container">
                             <a href="">
                                 <div class="project-block">
-                                    
+                                    <div class="project-img">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="project-footer">
+                                        <div class="project-name">
+                                            <span>Nome do Projeto</span>
+                                        </div>
+                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
+                                    </div>
                                 </div>
                             </a>
                             <a href="">
                                 <div class="project-block">
-                                    
+                                    <div class="project-img">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="project-footer">
+                                        <div class="project-name">
+                                            <span>Nome do Projeto</span>
+                                        </div>
+                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
+                                    </div>
                                 </div>
                             </a>
                             <a href="">
                                 <div class="project-block">
-                                    
+                                    <div class="project-img">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="project-footer">
+                                        <div class="project-name">
+                                            <span>Nome do Projeto</span>
+                                        </div>
+                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
+                                    </div>
                                 </div>
                             </a>
                             <a href="">
                                 <div class="project-block">
-                                    
+                                    <div class="project-img">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="project-footer">
+                                        <div class="project-name">
+                                            <span>Nome do Projeto</span>
+                                        </div>
+                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
+                                    </div>
                                 </div>
                             </a>
                             <a href="">
                                 <div class="project-block">
-                                    
+                                    <div class="project-img">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="project-footer">
+                                        <div class="project-name">
+                                            <span>Nome do Projeto</span>
+                                        </div>
+                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
+                                    </div>
                                 </div>
                             </a>
                         </div>

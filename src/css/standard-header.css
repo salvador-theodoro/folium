@@ -1,0 +1,181 @@
+/*----------------------HEADER--------------------*/
+
+header{
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    position: fixed;
+    background-color: #222222;
+}
+
+.header-content{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left-side{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header-right-side{
+    width: 17%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-button{
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.search-bar{
+    width: 60%;
+}
+
+.search-bar input{
+    width: 100%;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 20px;
+    margin-right: 110%;
+}
+
+#notification-button{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border: none;
+}
+
+#notification-button span{
+    font-size: 20px;
+    color: #222222;
+}
+
+#profile-button{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #222222;
+}
+
+#profile-button span{
+    font-size: 30px;
+    color: #fff;
+}
+
+#config-button{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border: none;
+}
+
+#config-button span{
+    font-size: 20px;
+    color: #222222;
+    margin-right: 0.5px;
+}
+
+#help-button{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border: none;
+}
+
+#help-button span{
+    font-size: 20px;
+    color: #222222;
+}
+
+#theme-button{
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: none;
+    margin-right: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#theme-button span{
+    font-size: 25px;
+    color: #222222;
+}
+
+/*------------------MENUS DROPDOWN--------------*/
+
+.dropdown-menu{
+    position: fixed;
+    top: 56px;
+    margin-top: 5px;
+    border-radius: 10px;
+    z-index: 999;
+    display: none;
+    width: 150px;
+    height: fit-content;
+    background-color: #323232;
+    text-align: left;
+}
+
+.dropdown-menu ul{
+    list-style: none;
+    width: fit-content;
+    display: flex;
+    padding: 0;
+    margin-left: 10px;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.dropdown-menu a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#profile-dropdown-menu{
+    right: 50px;
+}
+
+#profile-dropdown-menu ul li #user-name{
+    color: #fff;
+}
+
+#notification-dropdown-menu{
+    right: 100px;
+}
