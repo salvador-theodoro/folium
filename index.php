@@ -80,7 +80,7 @@ session_start();
                     <div class="section-title-line"></div>
                 </div>
                 <div class="carousel">
-                    <button class="scroll-button left-button"></button>
+                    <button class="scroll-button left-button"><span class="fa-solid fa-arrow-left"></span></button>
                         <div class="section-blocks-container">
                             <a href="project-page.html">
                                 <div class="project-block">
@@ -148,7 +148,7 @@ session_start();
                                 </div>
                             </a>
                         </div>
-                    <button class="scroll-button right-button"></button>
+                    <button class="scroll-button right-button"><span class="fa-solid fa-arrow-right"></span></button>
                 </div>
             </div>
             <!--outra sessão-->
@@ -160,35 +160,75 @@ session_start();
                     <div class="section-title-line"></div>
                 </div>
                 <div class="carousel">
-                    <button class="scroll-button left-button"></button>
+                    <button class="scroll-button left-button"><span class="fa-solid fa-arrow-left"></span></button>
                         <div class="section-blocks-container">
-                            <a href="">
+                            <a href="project-page.html">
                                 <div class="project-block">
-
+                                    <div class="project-img">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="project-footer">
+                                        <div class="project-name">
+                                            <span>Nome do Projeto</span>
+                                        </div>
+                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
+                                    </div>
                                 </div>
                             </a>
                             <a href="">
                                 <div class="project-block">
-                                    
+                                    <div class="project-img">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="project-footer">
+                                        <div class="project-name">
+                                            <span>Nome do Projeto</span>
+                                        </div>
+                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
+                                    </div>
                                 </div>
                             </a>
                             <a href="">
                                 <div class="project-block">
-                                    
+                                    <div class="project-img">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="project-footer">
+                                        <div class="project-name">
+                                            <span>Nome do Projeto</span>
+                                        </div>
+                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
+                                    </div>
                                 </div>
                             </a>
                             <a href="">
                                 <div class="project-block">
-                                    
+                                    <div class="project-img">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="project-footer">
+                                        <div class="project-name">
+                                            <span>Nome do Projeto</span>
+                                        </div>
+                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
+                                    </div>
                                 </div>
                             </a>
                             <a href="">
                                 <div class="project-block">
-                                    
+                                    <div class="project-img">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="project-footer">
+                                        <div class="project-name">
+                                            <span>Nome do Projeto</span>
+                                        </div>
+                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
+                                    </div>
                                 </div>
                             </a>
                         </div>
-                    <button class="scroll-button right-button"></button>
+                    <button class="scroll-button right-button"><span class="fa-solid fa-arrow-right"></span></button>
                 </div>
             </div>
             <!--mais outra epa-->
@@ -200,35 +240,75 @@ session_start();
                     <div class="section-title-line"></div>
                 </div>
                 <div class="carousel">
-                    <button class="scroll-button left-button"></button>
+                    <button class="scroll-button left-button"><span class="fa-solid fa-arrow-left"></span></button>
                         <div class="section-blocks-container">
-                            <a href="">
+                            <a href="project-page.html">
                                 <div class="project-block">
-
+                                    <div class="project-img">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="project-footer">
+                                        <div class="project-name">
+                                            <span>Nome do Projeto</span>
+                                        </div>
+                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
+                                    </div>
                                 </div>
                             </a>
                             <a href="">
                                 <div class="project-block">
-                                    
+                                    <div class="project-img">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="project-footer">
+                                        <div class="project-name">
+                                            <span>Nome do Projeto</span>
+                                        </div>
+                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
+                                    </div>
                                 </div>
                             </a>
                             <a href="">
                                 <div class="project-block">
-                                    
+                                    <div class="project-img">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="project-footer">
+                                        <div class="project-name">
+                                            <span>Nome do Projeto</span>
+                                        </div>
+                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
+                                    </div>
                                 </div>
                             </a>
                             <a href="">
                                 <div class="project-block">
-                                    
+                                    <div class="project-img">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="project-footer">
+                                        <div class="project-name">
+                                            <span>Nome do Projeto</span>
+                                        </div>
+                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
+                                    </div>
                                 </div>
                             </a>
                             <a href="">
                                 <div class="project-block">
-                                    
+                                    <div class="project-img">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="project-footer">
+                                        <div class="project-name">
+                                            <span>Nome do Projeto</span>
+                                        </div>
+                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
+                                    </div>
                                 </div>
                             </a>
                         </div>
-                    <button class="scroll-button right-button"></button>
+                    <button class="scroll-button right-button"><span class="fa-solid fa-arrow-right"></span></button>
                 </div>
             </div>
         </div>

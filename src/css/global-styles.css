@@ -15,3 +15,7 @@
 * {
   font-family: "Ligconsolata", sans-serif; /* 'sans-serif' como fallback se a Ligconsolata não funfar */
 }
+
+button:hover{
+  cursor: pointer;
+}

@@ -34,7 +34,29 @@ main{
 .main-header{
     width: 100%;
     height: 50px;
-    border: 1px solid;
+    border-radius: 15px;
+    background-color: #323232;
+}
+
+.main-header-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.main-header-content span.main-header-text{
+    margin-left: 10px;
+}
+
+.main-header-content button{
+    margin-right: 10px;
+    color: #fff;
+    background: none;
+    border: none;
+    font-size: 20px;
 }
 
 /*---------------ETAPAS---------------*/
@@ -52,6 +74,13 @@ main{
     width: 100%;
     height: fit-content;
     border: 1px solid;
+    border-radius: 15px;
+    background-color: #323232;
+    color: #fff;
+}
+
+.step a{
+    color: #fff;
 }
 
 .step-header{
@@ -78,5 +107,63 @@ main{
     width: 34.5%;
     height: 87vh;
     position: fixed;
-    border: 1px solid;
+    border-radius: 15px;
+    background-color: #222;
+    color: #fff;
+}
+
+.side-menu a{
+    color: #fff;
+}
+
+.side-menu-content{
+    width: 95%;
+    height: 95%;
+    margin: 15px 0 0 15px;
+}
+
+.side-menu-header{
+    width: 100%;
+    height: fit-content;
+}
+
+.menu-header-people{
+    height: 80px;
+    overflow-y: auto;
+    font-size: 17px;
+}
+
+.menu-header-people span{
+    margin-bottom: 5px;
+}
+
+.menu-header-people::-webkit-scrollbar{
+    background: transparent;
+    border: none;
+    width: 10px;
+}
+.menu-header-people::-webkit-scrollbar-thumb{
+    background-color: #323232;
+    border-radius: 15px;
+}
+
+.menu-header-date{
+    margin: 7px 0 7px 0;
+}
+
+.menu-desc{
+    width: 100%;
+    height: 60%;
+    overflow-y: auto;
+    margin-bottom: 7px;
+}
+
+.menu-desc::-webkit-scrollbar{
+    background: transparent;
+    border: none;
+    width: 10px;
+}
+.menu-desc::-webkit-scrollbar-thumb{
+    background-color: #323232;
+    border-radius: 15px;
 }
