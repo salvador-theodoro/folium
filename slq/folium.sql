@@ -6,9 +6,14 @@ CREATE TABLE usuarios (
     name1 VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
     password1 VARCHAR(64) NOT NULL, 
-    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    verificado TINYINT(1) DEFAULT 0,
+    hash1 varchar(255) not null
 );
 
 DROP TABLE usuarios;
 
 SELECT * FROM usuarios;
+
+TRUNCATE TABLE usuarios;
+

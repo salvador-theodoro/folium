@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $password = hash('sha256', $_POST['password']);
 
-    $stmt = $conn->prepare("SELECT id, name1 FROM usuarios WHERE email = ? AND password1 = ?");
+   $stmt = $conn->prepare("SELECT id, name1 FROM usuarios WHERE email = ? AND password1 = ? AND verificado = 1");
     $stmt->bind_param("ss", $email, $password);
     $stmt->execute();
     $result = $stmt->get_result();
