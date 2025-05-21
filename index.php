@@ -82,7 +82,7 @@ session_start();
                 <div class="carousel">
                     <button class="scroll-button left-button"></button>
                         <div class="section-blocks-container">
-                            <a href="">
+                            <a href="project-page.html">
                                 <div class="project-block">
                                     <div class="project-img">
                                         <img src="" alt="">
