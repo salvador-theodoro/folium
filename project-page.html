@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto</title>
+    <link rel="stylesheet" href="./src/css/global-styles.css">
+    <link rel="stylesheet" href="./src/css/standard-header.css">
+    <link rel="stylesheet" href="./src/css/project-page-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-left-side">
+                <div class="home-button">
+                    <a href="index.php">
+                        <img src="./src/img/icons/logo1.png" alt="" class="home-button-icon" height="40px">
+                    </a>
+                </div>
+                <div class="search-bar">
+                    <input type="text">
+                </div>
+            </div>
+            <div class="header-right-side">
+                <!--BOTÃO AJUDA-->
+                <div class="help-button">
+                    <button id="help-button"><span class="fa-solid fa-question"></span></button>
+                </div>
+                <!--BOTÃO CONFIG-->
+                <div class="config-button">
+                    <button id="config-button"><span class="fa-solid fa-gear"></span></button>
+                </div>
+                <!--BOTÃO NOTIFICAÇÕES-->
+                <div class="notification-button">
+                    <button id="notification-button"><span class="fa-regular fa-bell"></span></button>
+                </div>
+                <!--BOTÃO PERFIL-->
+                <div class="profile-button">
+                    <button id="profile-button"><span class="fa-solid fa-circle-user"></span></button>
+                </div>
+                <!--BOTÃO TEMA-->
+                <div class="theme-button">
+                    <button id="theme-button"><span class="fa-solid fa-lightbulb"></span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--MENU DROPDOWN-->
+    <section class="dropdown-menu-section">
+        <div class="dropdown-menu hidden" id="notification-dropdown-menu">
+            oii
+        </div>
+        <div class="dropdown-menu hidden" id="profile-dropdown-menu">
+            <ul>
+                <?php if (isset($_SESSION['user_nome'])): ?>
+                    <a href="profile-page.html">
+                    <li id="user-name"><strong><?php echo htmlspecialchars($_SESSION['user_nome']); ?></strong></li>
+                    </a>
+                    <li><a href="php/logout.php">Sair</a></li>
+                <?php else: ?>
+                    <li><a href="register-page.html">Registrar</a></li>
+                    <li><a href="login-page.html">Entrar</a></li>
+                <?php endif; ?>
+            </ul>
+        </div>
+    </section>
+    <main>
+        <div class="main-content">
+            <div class="main-left">
+                <div class="main-header">
+                    <span class="main-header-text">NOME DO PROJETO</span>
+                    <button><span class="fa-solid fa-ellipsis-vertical"></span></button>
+                </div>
+                <section class="project-steps">
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-header-text">
+                                <span class="step-name">NOME DA ETAPA</span>
+                                <span class="step-date">xx/xx/xxxx</span>
+                            </div>
+                            <div class="step-header-people">
+                                <a href="">
+                                    <span class="fa-solid fa-circle-user"></span>
+                                    <span>Pessoa 1</span>
+                                </a>
+                                <a href="">
+                                    <span class="fa-solid fa-circle-user"></span>
+                                    <span>Pessoa 2</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="step-main-content">
+                            Oiiiiiii
+                        </div>
+                        <div class="step-footer">
+                            Aqui estarão documentos, links, etc
+                        </div>
+                    </div>
+                    <!--outra etapa-->
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-header-text">
+                                <span class="step-name">NOME DA ETAPA</span>
+                                <span class="step-date">xx/xx/xxxx</span>
+                            </div>
+                            <div class="step-header-people">
+                                <a href="">
+                                    <span class="fa-solid fa-circle-user"></span>
+                                    <span>Pessoa 1</span>
+                                </a>
+                                <a href="">
+                                    <span class="fa-solid fa-circle-user"></span>
+                                    <span>Pessoa 2</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="step-main-content">
+                            Oiiiiiii
+                        </div>
+                        <div class="step-footer">
+                            Aqui estarão documentos, links, etc
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="main-right">
+                <div class="side-menu">
+                    <div class="side-menu-header">
+                        <div class="menu-header-people">
+                            <a href="">
+                                <span class="fa-solid fa-circle-user"></span>
+                                <span>Pessoa 1</span><br>
+                                <span class="fa-solid fa-circle-user"></span>
+                                <span>Pessoa 2</span><br>
+                                <span class="fa-solid fa-circle-user"></span>
+                                <span>Pessoa 3</span><br>
+                            </a>
+                        </div>
+                        <div class="menu-header-date">
+                            <span>Publicado em: xx/xx/xxxx</span><br>
+                            <span>Atualizado por último em: xx/xx/xxxx</span>
+                        </div>
+                    </div>
+                    <div class="menu-desc">
+                        oiiiiiiiii
+                    </div>
+                    <div class="menu-footer">
+                        Aqui estarão mídias em geral
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="./js/script.js"></script>
+</html>
