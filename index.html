@@ -1,320 +1,87 @@
-<?php
-session_start();
-?>
-
-<!--la ele-->
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Inicial</title>
+    <title>Entrar</title>
     <link rel="stylesheet" href="./src/css/global-styles.css">
-    <link rel="stylesheet" href="./src/css/home-styles.css">
-    <link rel="stylesheet" href="./src/css/standard-header.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/register-login-styles.css">
 </head>
 <body>
     <header>
         <div class="header-content">
             <div class="header-left-side">
-                <div class="home-button">
-                    <a href="index.php">
-                        <img src="./src/img/icons/logo1.png" alt="" class="home-button-icon" height="40px">
-                    </a>
-                </div>
-                <div class="search-bar">
-                    <input type="text">
+                <div class="header-logo">
+                    <img src="./src/img/icons/logo1.png" alt="" height="60px" class="logo-icon">
+                    <img src="./src/img/icons/logo2.png" alt="" width="150px" class="logo-title">
                 </div>
             </div>
             <div class="header-right-side">
-                <!--BOTÃO AJUDA-->
-                <div class="help-button">
-                    <button id="help-button"><span class="fa-solid fa-question"></span></button>
+                <a href="">Sobre</a>
+                <a href="">Redes Sociais</a>
+                <div class="login-page-button">
+                    <a href="login-page.html">Entrar</a>
                 </div>
-                <!--BOTÃO CONFIG-->
-                <div class="config-button">
-                    <button id="config-button"><span class="fa-solid fa-gear"></span></button>
-                </div>
-                <!--BOTÃO NOTIFICAÇÕES-->
-                <div class="notification-button">
-                    <button id="notification-button"><span class="fa-regular fa-bell"></span></button>
-                </div>
-                <!--BOTÃO PERFIL-->
-                <div class="profile-button">
-                    <button id="profile-button"><span class="fa-solid fa-user"></span></button>
-                </div>
-                <!--BOTÃO NOVO PROJETO-->
-                <div class="new-button">
-                    <a href="new-project-page.html"><span class="fa-solid fa-plus"></span></a>
+                <div class="register-page-button">
+                    <a href="register-page.html">Criar conta</a>
                 </div>
             </div>
         </div>
     </header>
-    <!--MENU DROPDOWN-->
-    <section class="dropdown-menu-section">
-        <div class="dropdown-menu hidden" id="notification-dropdown-menu">
-            oii
-        </div>
-        <div class="dropdown-menu hidden" id="profile-dropdown-menu">
-            <ul>
-                <?php if (isset($_SESSION['user_nome'])): ?>
-                    <a href="profile-page.html">
-                    <li id="user-name"><strong><?php echo htmlspecialchars($_SESSION['user_nome']); ?></strong></li>
-                    </a>
-                    <li><a href="php/logout.php">Sair</a></li>
-                <?php else: ?>
-                    <li><a href="register-page.html">Registrar</a></li>
-                    <li><a href="login-page.html">Entrar</a></li>
-                <?php endif; ?>
-            </ul>
-        </div>
-    </section>
     <main>
         <div class="main-content">
-            <!--uma sessão-->
-            <div class="main-sub-section">
-                <div class="section-title">
-                    <div class="section-title-text">
-                        <span>Recentes</span>
-                    </div>
-                    <div class="section-title-line"></div>
+            <div class="main-left-side">
+                <div class="span-box">
+                    <span>Entre para explorar projetos, ou use o modo visitante</span>
                 </div>
-                <div class="carousel">
-                    <button class="scroll-button left-button"><span class="fa-solid fa-arrow-left"></span></button>
-                        <div class="section-blocks-container">
-                            <a href="project-page.html">
-                                <div class="project-block">
-                                    <div class="project-img">
-                                        <img src="https://media.licdn.com/dms/image/v2/D5603AQEyDRs2RzcsLQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1727542497894?e=2147483647&v=beta&t=d9Yuoj9nRCBTmlgD88KgeJ_5VNZsUYWyiMAqpJ01FYA" alt="">
-                                    </div>
-                                    <div class="project-footer">
-                                        <div class="project-name">
-                                            <span>Nome do Projeto</span>
-                                        </div>
-                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="project-page.html">
-                                <div class="project-block">
-                                    <div class="project-img">
-                                        <img src="https://media.licdn.com/dms/image/v2/D5603AQEyDRs2RzcsLQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1727542497894?e=2147483647&v=beta&t=d9Yuoj9nRCBTmlgD88KgeJ_5VNZsUYWyiMAqpJ01FYA" alt="">
-                                    </div>
-                                    <div class="project-footer">
-                                        <div class="project-name">
-                                            <span>Nome do Projeto</span>
-                                        </div>
-                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="project-page.html">
-                                <div class="project-block">
-                                    <div class="project-img">
-                                        <img src="https://media.licdn.com/dms/image/v2/D5603AQEyDRs2RzcsLQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1727542497894?e=2147483647&v=beta&t=d9Yuoj9nRCBTmlgD88KgeJ_5VNZsUYWyiMAqpJ01FYA" alt="">
-                                    </div>
-                                    <div class="project-footer">
-                                        <div class="project-name">
-                                            <span>Nome do Projeto</span>
-                                        </div>
-                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="project-page.html">
-                                <div class="project-block">
-                                    <div class="project-img">
-                                        <img src="https://media.licdn.com/dms/image/v2/D5603AQEyDRs2RzcsLQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1727542497894?e=2147483647&v=beta&t=d9Yuoj9nRCBTmlgD88KgeJ_5VNZsUYWyiMAqpJ01FYA" alt="">
-                                    </div>
-                                    <div class="project-footer">
-                                        <div class="project-name">
-                                            <span>Nome do Projeto</span>
-                                        </div>
-                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="project-page.html">
-                                <div class="project-block">
-                                    <div class="project-img">
-                                        <img src="https://media.licdn.com/dms/image/v2/D5603AQEyDRs2RzcsLQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1727542497894?e=2147483647&v=beta&t=d9Yuoj9nRCBTmlgD88KgeJ_5VNZsUYWyiMAqpJ01FYA" alt="">
-                                    </div>
-                                    <div class="project-footer">
-                                        <div class="project-name">
-                                            <span>Nome do Projeto</span>
-                                        </div>
-                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    <button class="scroll-button right-button"><span class="fa-solid fa-arrow-right"></span></button>
+                <div class="visit-button">
+                    <a href="index.php">
+                        <span>
+                            Entrar como visitante
+                        </span>
+                    </a>
                 </div>
             </div>
-            <!--outra sessão-->
-            <div class="main-sub-section">
-                <div class="section-title">
-                    <div class="section-title-text">
-                        <span>Em alta</span>
+            <div class="main-right-side">
+                <div class="form-box">
+                    <div class="form-title">
+                        <img src="./src/img/icons/logo1.png" alt="" height="60px"><br>
+                        <span>Bem-vindo(a) ao Folium</span>
                     </div>
-                    <div class="section-title-line"></div>
-                </div>
-                <div class="carousel">
-                    <button class="scroll-button left-button"><span class="fa-solid fa-arrow-left"></span></button>
-                        <div class="section-blocks-container">
-                            <a href="project-page.html">
-                                <div class="project-block">
-                                    <div class="project-img">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="project-footer">
-                                        <div class="project-name">
-                                            <span>Nome do Projeto</span>
-                                        </div>
-                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
-                                    </div>
-                                </div>
-                            </a>
+                    <form action="./php/login.php" method="post">
+                        <label for="email">
+                            Email: 
+                        </label><br>
+                        <input type="email" name="email" id="" placeholder="Insira seu e-mail" class="insert"><br>
+                        <label for="password">
+                            Senha: 
+                        </label><br>
+                        <input type="password" name="password" id="" placeholder="Insira sua senha" class="insert"><br>
+                        <span>
                             <a href="">
-                                <div class="project-block">
-                                    <div class="project-img">
-                                        <img src="https://staticg.sportskeeda.com/editor/2022/06/b2824-16554960822905-1920.jpg" alt="">
-                                    </div>
-                                    <div class="project-footer">
-                                        <div class="project-name">
-                                            <span>Nome do Projeto</span>
-                                        </div>
-                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
-                                    </div>
-                                </div>
+                                Esqueceu sua senha?
                             </a>
-                            <a href="">
-                                <div class="project-block">
-                                    <div class="project-img">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="project-footer">
-                                        <div class="project-name">
-                                            <span>Nome do Projeto</span>
-                                        </div>
-                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="project-block">
-                                    <div class="project-img">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="project-footer">
-                                        <div class="project-name">
-                                            <span>Nome do Projeto</span>
-                                        </div>
-                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="project-block">
-                                    <div class="project-img">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="project-footer">
-                                        <div class="project-name">
-                                            <span>Nome do Projeto</span>
-                                        </div>
-                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
-                                    </div>
-                                </div>
-                            </a>
+                        </span>
+                        <div class="submit-button-box">
+                            <input type="submit" name="register-submit" id="login" value="ENTRAR" class="submit-button">
                         </div>
-                    <button class="scroll-button right-button"><span class="fa-solid fa-arrow-right"></span></button>
-                </div>
-            </div>
-            <!--mais outra epa-->
-            <div class="main-sub-section">
-                <div class="section-title">
-                    <div class="section-title-text">
-                        <span>Outro exemplo</span>
+                    </form>
+                    <div class="google-button">
+                        <a href="">
+                            <img src="./src/img/icons/google-icon.png" alt="" height="30px">
+                            <span>Entrar com Google</span>
+                        </a>
                     </div>
-                    <div class="section-title-line"></div>
-                </div>
-                <div class="carousel">
-                    <button class="scroll-button left-button"><span class="fa-solid fa-arrow-left"></span></button>
-                        <div class="section-blocks-container">
-                            <a href="project-page.html">
-                                <div class="project-block">
-                                    <div class="project-img">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="project-footer">
-                                        <div class="project-name">
-                                            <span>Nome do Projeto</span>
-                                        </div>
-                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="project-block">
-                                    <div class="project-img">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="project-footer">
-                                        <div class="project-name">
-                                            <span>Nome do Projeto</span>
-                                        </div>
-                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="project-block">
-                                    <div class="project-img">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="project-footer">
-                                        <div class="project-name">
-                                            <span>Nome do Projeto</span>
-                                        </div>
-                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="project-block">
-                                    <div class="project-img">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="project-footer">
-                                        <div class="project-name">
-                                            <span>Nome do Projeto</span>
-                                        </div>
-                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="project-block">
-                                    <div class="project-img">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="project-footer">
-                                        <div class="project-name">
-                                            <span>Nome do Projeto</span>
-                                        </div>
-                                        <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    <button class="scroll-button right-button"><span class="fa-solid fa-arrow-right"></span></button>
+                    <span class="terms">
+                        Ao continuar, você concorda com os <a href="">Termos de Serviço</a> do Folium e confirma que leu nossa 
+                        <a href="">Política de Privacidade</a>. <a href="">Aviso na coleta de informações</a>.
+                    </span>
+                    <span class="redirect">
+                        Ainda não está no Folium? <a href="register-page.html">Crie sua conta</a>.
+                    </span>
                 </div>
             </div>
         </div>
     </main>
 </body>
-<script src="./js/script.js"></script>
 </html>
