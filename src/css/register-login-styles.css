@@ -121,9 +121,9 @@ main{
 }
 
 .visit-button{
-    margin: 30px 150px;
-    width: 180px;
-    height: 40px;
+    margin: 30px;
+    width: 250px;
+    height: 60px;
     border: none;
     border-radius: 50px;
     background-color: #8752D2;
@@ -138,7 +138,7 @@ main{
 }
 
 .visit-button span{
-    font-size: 15px;
+    font-size: 20px;
 }
 
 /*---------------------CAIXA FORMULÁRIO LOGIN/REGISTRO-----------------------*/
