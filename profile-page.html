@@ -4,57 +4,84 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Perfil</title>
-  <link rel="stylesheet" href="./src/css/profile-styles.css" />
+  <link rel="stylesheet" href="./src/css/global-styles.css">
+  <link rel="stylesheet" href="./src/css/standard-header.css">
+  <link rel="stylesheet" href="./src/css/profile-page-styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <div class="header">
-    <button class="edit-btn" onclick="toggleEdit()">Editar perfil</button>
-  </div>
-
-  <input type="file" id="fileInput" style="display: none;" accept="image/*" onchange="loadImage(event)" />
-  <div class="profile-pic" id="profilePic"></div>
-  <button class="photo-btn" onclick="document.getElementById('fileInput').click()">Alterar foto de perfil</button>
-
-  <div class="info">
-    <h2 id="nameDisplay">RAFAEL MIRANDA ALMEIDA</h2>
-    <input type="text" id="nameInput" style="display: none;" />
-
-    <div class="about-box">
-      <b>Sobre</b>
-      <p id="aboutDisplay">Olá meu nome é ....</p>
-      <textarea id="aboutInput" rows="4" style="display: none;"></textarea>
+  <header>
+    <div class="header-content">
+        <div class="header-left-side">
+            <div class="home-button">
+                <a href="home.php">
+                    <img src="./src/img/icons/logo1.png" alt="" class="home-button-icon" height="40px">
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text">
+            </div>
+        </div>
+        <div class="header-right-side">
+            <!--BOTÃO AJUDA-->
+            <div class="help-button">
+                <button id="help-button"><span class="fa-solid fa-question"></span></button>
+            </div>
+            <!--BOTÃO CONFIG-->
+            <div class="config-button">
+                <button id="config-button"><span class="fa-solid fa-gear"></span></button>
+            </div>
+            <!--BOTÃO NOTIFICAÇÕES-->
+            <div class="notification-button">
+                <button id="notification-button"><span class="fa-regular fa-bell"></span></button>
+            </div>
+            <!--BOTÃO PERFIL-->
+            <div class="profile-button">
+                <button id="profile-button"><span class="fa-solid fa-user"></span></button>
+            </div>
+            <!--BOTÃO NOVO PROJETO-->
+            <div class="new-button">
+                <a href="new-project-page.html"><span class="fa-solid fa-plus"></span></a>
+            </div>
+        </div>
     </div>
-  </div>
+  </header>
+  <!--MENU DROPDOWN-->
+  <section class="dropdown-menu-section">
+      <div class="dropdown-menu hidden" id="notification-dropdown-menu">
+          oii
+      </div>
+      <div class="dropdown-menu hidden" id="profile-dropdown-menu">
+          <ul>
+              <?php if (isset($_SESSION['user_nome'])): ?>
+                  <a href="profile-page.html">
+                  <li id="user-name"><strong><?php echo htmlspecialchars($_SESSION['user_nome']); ?></strong></li>
+                  </a>
+                  <li><a href="php/logout.php">Sair</a></li>
+              <?php else: ?>
+                  <li><a href="register-page.html">Registrar</a></li>
+                  <li><a href="index.html.html">Entrar</a></li>
+              <?php endif; ?>
+          </ul>
+      </div>
+  </section>
 
-  <script>
-    function toggleEdit() {
-      const isEditing = document.getElementById("nameInput").style.display === "block";
-      if (isEditing) {
-        document.getElementById("nameDisplay").textContent = document.getElementById("nameInput").value;
-        document.getElementById("aboutDisplay").textContent = document.getElementById("aboutInput").value;
-      }
-      document.getElementById("nameDisplay").style.display = isEditing ? "block" : "none";
-      document.getElementById("aboutDisplay").style.display = isEditing ? "block" : "none";
-
-      document.getElementById("nameInput").style.display = isEditing ? "none" : "block";
-      document.getElementById("aboutInput").style.display = isEditing ? "none" : "block";
-
-      if (!isEditing) {
-        document.getElementById("nameInput").value = document.getElementById("nameDisplay").textContent;
-        document.getElementById("aboutInput").value = document.getElementById("aboutDisplay").textContent;
-      }
-    }
-
-    function loadImage(event) {
-      const file = event.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-          document.getElementById("profilePic").style.backgroundImage = `url('${e.target.result}')`;
-        };
-        reader.readAsDataURL(file);
-      }
-    }
-  </script>
+  <main>
+    <div class="main-content">
+      <div class="profile-header">
+        <div class="header-image">
+          <img src="https://media.licdn.com/dms/image/v2/D5603AQEyDRs2RzcsLQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1727542497894?e=2147483647&v=beta&t=d9Yuoj9nRCBTmlgD88KgeJ_5VNZsUYWyiMAqpJ01FYA" alt="">
+        </div>
+        <div class="profile-pic">
+          <button>
+            <img src="https://media.licdn.com/dms/image/v2/D5603AQEyDRs2RzcsLQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1727542497894?e=2147483647&v=beta&t=d9Yuoj9nRCBTmlgD88KgeJ_5VNZsUYWyiMAqpJ01FYA" alt="">
+          </button>
+        </div>
+        <div class="profile-name">
+          <span>Luiz Felipe Calcagno Baltieri</span>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
