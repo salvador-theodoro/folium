@@ -110,6 +110,10 @@ main{
     flex-direction: column;
 }
 
+.project-block:hover .project-footer{
+    background-color: #e0e0e0;
+}
+
 .project-img{
     border-radius: 15px 15px 0 0;
     width: 100%;

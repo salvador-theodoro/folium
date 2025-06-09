@@ -109,7 +109,6 @@ header{
 #config-button span{
     font-size: 20px;
     color: #222222;
-    margin-right: 0.5px;
 }
 
 #help-button{
@@ -128,10 +127,21 @@ header{
     color: #222222;
 }
 
+.def-btn{
+    width: 30px;
+    height: 30px;
+    background-color: none;
+    border-radius: 50%;
+}
+
+.def-btn:hover{
+    background-color: #e0e0e0;
+}
+
 .new-button{
     width: 40px;
     height: 40px;
-    background-color: none;
+    background-color: #8752D2;
     border-radius: 50%;
     border: none;
     margin-right: 20px;
@@ -140,9 +150,13 @@ header{
     align-items: center;
 }
 
+.new-button:hover{
+    background-color: #975ce9;
+}
+
 .new-button span{
     font-size: 25px;
-    color: #222222;
+    color: #fff;
 }
 
 /*------------------MENUS DROPDOWN--------------*/
@@ -156,8 +170,9 @@ header{
     display: none;
     width: 150px;
     height: fit-content;
-    background-color: #323232;
+    background-color: #fff;
     text-align: left;
+    box-shadow: 2px 2px 7px -5px #222222;
 }
 
 .dropdown-menu ul{
@@ -172,7 +187,7 @@ header{
 
 .dropdown-menu a{
     text-decoration: none;
-    color: #fff;
+    color: #323232;
 }
 
 #profile-dropdown-menu{
@@ -180,7 +195,7 @@ header{
 }
 
 #profile-dropdown-menu ul li #user-name{
-    color: #fff;
+    color: #323232;
 }
 
 #notification-dropdown-menu{

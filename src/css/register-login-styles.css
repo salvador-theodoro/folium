@@ -86,13 +86,13 @@ header{
 /*--------------------------MAIN--------------------------*/
 
 main{
-/* Adicionando Flexbox para centralizar o conteúdo */
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  height: 100vh; /* Garante que a altura seja 100% da altura da janela */
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 70px);
   width: 100%;
-  margin: 0; /* Remove margens padrão */
+  margin: 0;
+  margin-top: 70px;
 }
 
 .main-content{
