@@ -10,16 +10,15 @@ main{
 .main-content{
     width: 100%;
     height: 100%;
-    border: 1px solid;
     display: flex;
+    flex-direction: column;
 }
 
 /*--------------------HEADER------------------------*/
 
 .profile-header{
     width: 100%;
-    height: 250px;
-    border: 1px solid red;
+    height: 260px;
     position: relative;
 }
 
@@ -67,5 +66,140 @@ main{
     position: absolute;
     bottom: 0;
     left: 300px;
+    font-size: 50px;
+}
+
+/*---------------------BIO-------------------------------*/
+
+.bio-box{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: fit-content;
+    border-radius: 15px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 22px;
+    color: #323232;
+    background-color: #fff;
+}
+
+.bio-title{
+    font-weight: bolder;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.bio-links{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin: 7px 0 0 0;
+}
+
+.links-title{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.bio-links a{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: #8752D2;
+    width: fit-content;
+}
+
+.bio-links a img{
+    height: 20px;
+}
+
+/*-----------------------sessão projetos------------------------*/
+
+.projects-section{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 25px 0 0 0;
+    width: 100%;
+    height: fit-content;
+}
+
+.projects-section-title{
     font-size: 30px;
+    font-weight: bolder;
+    margin-left: 5%;
+}
+
+.projects-display{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    gap: 5%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/*-------------------------BLOCOS DE PROJETO---------------------------*/
+
+.project-block{
+    width: 350px;
+    height: 200px;
+    flex-shrink: 0;
+    border: 0px solid #000;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.project-block:hover .project-footer{
+    background-color: #e0e0e0;
+}
+
+.project-img{
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    height: 150px;
+    align-self: center;
+}
+
+.project-img img{
+    height: 100%;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.project-footer{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 0 0 15px 15px;
+}
+
+.project-footer .project-name{
+    margin-left: 15px;
+    margin-top: 15px;
+    color: #323232;
+    font-weight: bold;
+}
+
+.project-footer button{
+    width: 15px;
+    background: none;
+    display: inline-flex;
+    justify-content: center;
+    border: none;
+}
+
+.project-footer button span{
+    margin-top: 18px;
+    margin-right: 15px;
+    color: #323232;
 }

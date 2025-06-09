@@ -9,7 +9,7 @@ body {
   font-family: "Ligconsolata", sans-serif;
   margin: 0;
   background-color: #e4e4e4;
-  background: url("../img/icons/fundo33.png") no-repeat center center fixed;
+  background: url("../img/fundo33.png") no-repeat center center fixed;
   background-size: cover;
   overflow: hidden; /* Impede o scroll */
 }

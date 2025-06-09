@@ -11,77 +11,183 @@
 </head>
 <body>
   <header>
-    <div class="header-content">
-        <div class="header-left-side">
-            <div class="home-button">
-                <a href="home.php">
-                    <img src="./src/img/icons/logo1.png" alt="" class="home-button-icon" height="40px">
-                </a>
+        <div class="header-content">
+            <div class="header-left-side">
+                <div class="home-button">
+                    <a href="home.html">
+                        <img src="./src/img/icons/logo1.png" alt="" class="home-button-icon" height="40px">
+                    </a>
+                </div>
+                <div class="search-bar">
+                    <input type="text">
+                </div>
             </div>
-            <div class="search-bar">
-                <input type="text">
+            <div class="header-right-side">
+                <!--BOTÃO AJUDA-->
+                <div class="help-button def-btn">
+                    <button id="help-button"><span class="fa-solid fa-question"></span></button>
+                </div>
+                <!--BOTÃO CONFIG-->
+                <div class="config-button def-btn">
+                    <button id="config-button"><span class="fa-solid fa-gear"></span></button>
+                </div>
+                <!--BOTÃO NOTIFICAÇÕES-->
+                <div class="notification-button def-btn">
+                    <button id="notification-button"><span class="fa-regular fa-bell"></span></button>
+                </div>
+                <!--BOTÃO PERFIL-->
+                <div class="profile-button def-btn">
+                    <button id="profile-button"><span class="fa-solid fa-user"></span></button>
+                </div>
+                <!--BOTÃO NOVO PROJETO-->
+                <div class="new-button">
+                    <a href="new-project-page.html"><span class="fa-solid fa-plus"></span></a>
+                </div>
             </div>
         </div>
-        <div class="header-right-side">
-            <!--BOTÃO AJUDA-->
-            <div class="help-button">
-                <button id="help-button"><span class="fa-solid fa-question"></span></button>
-            </div>
-            <!--BOTÃO CONFIG-->
-            <div class="config-button">
-                <button id="config-button"><span class="fa-solid fa-gear"></span></button>
-            </div>
-            <!--BOTÃO NOTIFICAÇÕES-->
-            <div class="notification-button">
-                <button id="notification-button"><span class="fa-regular fa-bell"></span></button>
-            </div>
-            <!--BOTÃO PERFIL-->
-            <div class="profile-button">
-                <button id="profile-button"><span class="fa-solid fa-user"></span></button>
-            </div>
-            <!--BOTÃO NOVO PROJETO-->
-            <div class="new-button">
-                <a href="new-project-page.html"><span class="fa-solid fa-plus"></span></a>
-            </div>
+    </header>
+    <!--MENU DROPDOWN-->
+    <section class="dropdown-menu-section">
+        <div class="dropdown-menu hidden" id="notification-dropdown-menu">
+            oii
         </div>
-    </div>
-  </header>
-  <!--MENU DROPDOWN-->
-  <section class="dropdown-menu-section">
-      <div class="dropdown-menu hidden" id="notification-dropdown-menu">
-          oii
-      </div>
-      <div class="dropdown-menu hidden" id="profile-dropdown-menu">
-          <ul>
-              <?php if (isset($_SESSION['user_nome'])): ?>
-                  <a href="profile-page.html">
-                  <li id="user-name"><strong><?php echo htmlspecialchars($_SESSION['user_nome']); ?></strong></li>
-                  </a>
-                  <li><a href="php/logout.php">Sair</a></li>
-              <?php else: ?>
-                  <li><a href="register-page.html">Registrar</a></li>
-                  <li><a href="index.html.html">Entrar</a></li>
-              <?php endif; ?>
-          </ul>
-      </div>
-  </section>
+        <div class="dropdown-menu hidden" id="profile-dropdown-menu">
+            <ul>
+                <?php if (isset($_SESSION['user_nome'])): ?>
+                    <a href="profile-page.html">
+                    <li id="user-name"><strong><?php echo htmlspecialchars($_SESSION['user_nome']); ?></strong></li>
+                    </a>
+                    <li><a href="php/logout.php">Sair</a></li>
+                <?php else: ?>
+                    <li><a href="register-page.html">Registrar</a></li>
+                    <li><a href="index.html">Entrar</a></li>
+                <?php endif; ?>
+            </ul>
+        </div>
+    </section>
 
   <main>
+    <!--header perfil-->
     <div class="main-content">
       <div class="profile-header">
         <div class="header-image">
-          <img src="https://media.licdn.com/dms/image/v2/D5603AQEyDRs2RzcsLQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1727542497894?e=2147483647&v=beta&t=d9Yuoj9nRCBTmlgD88KgeJ_5VNZsUYWyiMAqpJ01FYA" alt="">
+          <img src="./src/img/standard-img.jpg" alt="">
         </div>
         <div class="profile-pic">
           <button>
-            <img src="https://media.licdn.com/dms/image/v2/D5603AQEyDRs2RzcsLQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1727542497894?e=2147483647&v=beta&t=d9Yuoj9nRCBTmlgD88KgeJ_5VNZsUYWyiMAqpJ01FYA" alt="">
+            <img src="" alt="">
           </button>
         </div>
         <div class="profile-name">
-          <span>Luiz Felipe Calcagno Baltieri</span>
+          <span><b>Nome do Usuário</b></span>
         </div>
       </div>
-    </div>
+      <!--caixa da bio-->
+      <div class="bio-box">
+        <span class="bio-title">Descrição</span>
+        <span class="bio-text">
+          Olá, sou Luiz Felipe. Sou desenvolvedor back-end. Vivo em Mauá, SP.
+        </span>
+        <div class="bio-links">
+          <span class="links-title">Links</span>
+          <a href="">
+            <img src="./src/img/icons/instagram-icon.png" alt="">
+            <span>Instagram</span>
+          </a>
+          <a href="">
+            <img src="./src/img/icons/linkedin-icon.png" alt="">
+            <span>LinkedIn</span>
+          </a>
+          <a href="">
+            <img src="./src/img/icons/github-icon.png" alt="">
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+      <!--projetos-->
+      <div class="projects-section">
+        <span class="projects-section-title">Projetos</span>
+        <div class="projects-display">
+          <a href="project-page.html">
+            <div class="project-block">
+              <div class="project-img">
+                <img src="./src/img/standard-img.jpg" alt="">
+              </div>
+              <div class="project-footer">
+                <div class="project-name">
+                  <span>Nome do Projeto</span>
+                </div>
+                <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
+              </div>
+            </div>
+          </a>
+          <a href="project-page.html">
+            <div class="project-block">
+              <div class="project-img">
+                <img src="./src/img/standard-img.jpg" alt="">
+              </div>
+              <div class="project-footer">
+                <div class="project-name">
+                  <span>Nome do Projeto</span>
+                </div>
+                <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
+              </div>
+            </div>
+          </a>
+          <a href="project-page.html">
+            <div class="project-block">
+              <div class="project-img">
+                <img src="./src/img/standard-img.jpg" alt="">
+              </div>
+              <div class="project-footer">
+                <div class="project-name">
+                  <span>Nome do Projeto</span>
+                </div>
+                <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
+              </div>
+            </div>
+          </a>
+          <a href="project-page.html">
+            <div class="project-block">
+              <div class="project-img">
+                <img src="./src/img/standard-img.jpg" alt="">
+              </div>
+              <div class="project-footer">
+                <div class="project-name">
+                  <span>Nome do Projeto</span>
+                </div>
+                <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
+              </div>
+            </div>
+          </a>
+          <a href="project-page.html">
+            <div class="project-block">
+              <div class="project-img">
+                <img src="./src/img/standard-img.jpg" alt="">
+              </div>
+              <div class="project-footer">
+                <div class="project-name">
+                  <span>Nome do Projeto</span>
+                </div>
+                <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
+              </div>
+            </div>
+          </a>
+          <a href="project-page.html">
+            <div class="project-block">
+              <div class="project-img">
+                <img src="./src/img/standard-img.jpg" alt="">
+              </div>
+              <div class="project-footer">
+                <div class="project-name">
+                  <span>Nome do Projeto</span>
+                </div>
+                <button class="project-options"><span class="fa-solid fa-ellipsis-vertical"></span></button>
+              </div>
+            </div>
+          </a>
+      </div>
   </main>
 </body>
+<script src="./js/script.js"></script>
 </html>
