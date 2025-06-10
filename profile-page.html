@@ -61,53 +61,69 @@ if (!$perfil) {
 </head>
 <body>
   <header>
-    <div class="header-content">
-      <div class="header-left-side">
-        <div class="home-button">
-          <a href="home.html">
-            <img src="./src/img/icons/logo1.png" alt="Logo" height="40px">
-          </a>
+        <div class="header-content">
+            <div class="header-left-side">
+                <div class="home-button">
+                    <a href="home.php">
+                        <img src="./src/img/icons/logo1.png" alt="" class="home-button-icon" height="60px">
+                    </a>
+                </div>
+                <div class="search-bar">
+                    <img src="./src/img/icons/lupa.png" class="search-icon" alt="Lupa">
+                    <input type="text" placeholder="Pesquisar">
+                </div>
+            </div>
+            <div class="header-right-side">
+                <!--BOTÃO AJUDA-->
+                <div class="help-button def-btn">
+                    <a href="help.html">
+                    <button id="help-button"><span class="fa-solid fa-question"></span></button>
+                    </a>
+                </div>
+                <!--BOTÃO CONFIG-->
+                <div class="config-button def-btn">
+                    <a href="config.html">
+                        <button id="config-button"><span class="fa-solid fa-gear"></span></button>
+                    </a>
+                </div>
+                <!--BOTÃO NOTIFICAÇÕES-->
+                <div class="notification-button def-btn">
+                    <a href="notification.html">
+                        <button id="notification-button"><span class="fa-regular fa-bell"></span></button>
+                    </a>
+                </div>
+                <!--BOTÃO PERFIL-->
+                <div class="profile-button def-btn">
+                        <button id="profile-button"><span class="fa-solid fa-user"></span></button>
+                </div>
+                <!--BOTÃO NOVO PROJETO-->
+                <div class="new-project-button">
+                    <a href="new-project-page.html"><span class="fa-solid fa-plus"></span></a>
+                </div>
+            </div>
         </div>
-        <div class="search-bar">
-          <input type="text" />
+    </header>
+    <!--MENU DROPDOWN-->
+    <section class="dropdown-menu-section">
+        <div class="dropdown-menu hidden" id="notification-dropdown-menu">
+            oii oque isso aqui faz?
         </div>
-      </div>
-      <div class="header-right-side">
-        <div class="help-button def-btn">
-          <button id="help-button"><span class="fa-solid fa-question"></span></button>
+        <div class="dropdown-menu hidden" id="profile-dropdown-menu">
+            <ul>
+                <?php if (isset($_SESSION['user_nome'])): ?>
+                    <li id="user-name">
+                        <a href="profile-page.php?id=<?php echo $_SESSION['user_id']; ?>">
+                        <li id="user-name"><strong><?php echo htmlspecialchars($_SESSION['user_nome']); ?></strong></li>
+                        </a>
+                    </li>
+                    <li><a href="php/logout.php">Sair</a></li>
+                <?php else: ?>
+                    <li><a href="register-page.html">Registrar</a></li>
+                    <li><a href="index.html">Entrar</a></li>
+                <?php endif; ?>
+            </ul>
         </div>
-        <div class="config-button def-btn">
-          <button id="config-button"><span class="fa-solid fa-gear"></span></button>
-        </div>
-        <div class="notification-button def-btn">
-          <button id="notification-button"><span class="fa-regular fa-bell"></span></button>
-        </div>
-        <div class="profile-button def-btn">
-          <button id="profile-button"><span class="fa-solid fa-user"></span></button>
-        </div>
-        <div class="new-button">
-          <a href="new-project-page.html"><span class="fa-solid fa-plus"></span></a>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <section class="dropdown-menu-section">
-    <div class="dropdown-menu hidden" id="notification-dropdown-menu">oii</div>
-    <div class="dropdown-menu hidden" id="profile-dropdown-menu">
-      <ul>
-        <?php if (isset($_SESSION['user_nome'])): ?>
-          <a href="profile-page.php?id=<?= $_SESSION['user_id'] ?>">
-            <li id="user-name"><strong><?= htmlspecialchars($_SESSION['user_nome']) ?></strong></li>
-          </a>
-          <li><a href="php/logout.php">Sair</a></li>
-        <?php else: ?>
-          <li><a href="register-page.html">Registrar</a></li>
-          <li><a href="index.html">Entrar</a></li>
-        <?php endif; ?>
-      </ul>
-    </div>
-  </section>
+    </section>
 
   <!-- Editar Perfil -->
 
@@ -117,27 +133,30 @@ if (!$perfil) {
   </div>
   <div id="popup-editar-perfil" class="popup hidden">
     <div class="popup-content">
-      <span class="close-btn" onclick="fecharPopup()">&times;</span>
-      <form action="php/perfil.php" method="POST" enctype="multipart/form-data">
-        <label>Descrição:</label><br>
-        <textarea name="descricao" rows="4" cols="40" required><?= htmlspecialchars($perfil['descricao']) ?></textarea><br>
+      <div class="popup-header">
+        <span class="popup-title">EDITAR PERFIL</span>
+        <span class="close-btn" onclick="fecharPopup()">&times;</span>
+      </div>
+      <form action="php/perfil.php" method="POST" enctype="multipart/form-data" class="edit-profile-form">
+        <label>Descrição:</label>
+        <textarea name="descricao" rows="4" cols="40" required class="text-input"><?= htmlspecialchars($perfil['descricao']) ?></textarea>
 
-        <label>Instagram:</label><br>
-        <input type="text" name="instagram" value="<?= htmlspecialchars($perfil['instagram']) ?>"><br>
+        <label>Instagram:</label>
+        <input type="text" name="instagram" value="<?= htmlspecialchars($perfil['instagram']) ?>" class="text-input">
 
-        <label>LinkedIn:</label><br>
-        <input type="text" name="linkedin" value="<?= htmlspecialchars($perfil['linkedin']) ?>"><br>
+        <label>LinkedIn:</label>
+        <input type="text" name="linkedin" value="<?= htmlspecialchars($perfil['linkedin']) ?>" class="text-input">
 
-        <label>GitHub:</label><br>
-        <input type="text" name="github" value="<?= htmlspecialchars($perfil['github']) ?>"><br>
+        <label>GitHub:</label>
+        <input type="text" name="github" value="<?= htmlspecialchars($perfil['github']) ?>" class="text-input">
 
-        <label>Imagem de Perfil:</label><br>
-        <input type="file" name="imagem_perfil" accept="image/*"><br>
+        <label>Imagem de Perfil:</label>
+        <input type="file" name="imagem_perfil" accept="image/*">
 
-        <label>Banner de Fundo:</label><br>
-        <input type="file" name="banner_fundo" accept="image/*"><br>
+        <label>Banner de Fundo:</label>
+        <input type="file" name="banner_fundo" accept="image/*">
 
-        <button type="submit">Salvar Alterações</button>
+        <button type="submit" class="submit-button">Salvar Alterações</button>
       </form>
     </div>
   </div>

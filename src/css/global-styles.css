@@ -24,6 +24,7 @@ body {
   background-color: #f0f0f0;
 }
 
+
 /* ============================
    🌙 DARK MODE STYLES
 ============================ */
@@ -44,4 +45,9 @@ body.dark-mode .dropdown-menu {
 
 body.dark-mode .def-btn:hover {
   background-color: #3a3a3a;
+}
+
+.hidden {
+  display: none;
+
 }
