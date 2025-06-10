@@ -12,54 +12,76 @@
 </head>
 <body>
     <header>
-  <div class="header-content">
-    <div class="header-left-side">
-      <div class="home-button">
-        <a href="home.php">
-          <img src="./src/img/icons/logo1.png" alt="" class="home-button-icon" height="60px">
-        </a>
+      <div class="header-content">
+        <div class="header-left-side">
+          <div class="home-button">
+            <a href="home.php">
+              <img src="./src/img/icons/logo1.png" alt="" class="home-button-icon" height="60px">
+            </a>
+          </div>
+          <div class="search-bar">
+            <img src="./src/img/icons/lupa.png" class="search-icon" alt="Lupa">
+            <input type="text" placeholder="Pesquisar">
+          </div>
+        </div>
+        <div class="header-right-side">
+          <!-- BOTÃO DARK MODE -->
+          <div class="dark-mode-toggle def-btn">
+            <button id="dark-mode-button" onclick="toggleDarkMode()">
+              <span class="fa-solid fa-moon"></span>
+            </button>
+          </div>
+          <!-- BOTÃO AJUDA -->
+          <div class="help-button def-btn">
+            <a href="help.html">
+              <button id="help-button"><span class="fa-solid fa-question"></span></button>
+            </a>
+          </div>
+          <!-- BOTÃO CONFIG -->
+          <div class="config-button def-btn">
+            <a href="config.html">
+              <button id="config-button"><span class="fa-solid fa-gear"></span></button>
+            </a>
+          </div>
+          <!-- BOTÃO NOTIFICAÇÕES -->
+          <div class="notification-button def-btn">
+            <a href="notification.html">
+              <button id="notification-button"><span class="fa-regular fa-bell"></span></button>
+            </a>
+          </div>
+          <!-- BOTÃO PERFIL -->
+          <div class="profile-button def-btn">
+            <button id="profile-button"><span class="fa-solid fa-user"></span></button>
+          </div>
+          <!-- BOTÃO NOVO PROJETO -->
+          <div class="new-project-button">
+            <a href="new-project-page.html"><span class="fa-solid fa-plus"></span></a>
+          </div>
+        </div>
       </div>
-      <div class="search-bar">
-        <img src="./src/img/icons/lupa.png" class="search-icon" alt="Lupa">
-        <input type="text" placeholder="Pesquisar">
-      </div>
-    </div>
-    <div class="header-right-side">
-      <!-- BOTÃO DARK MODE -->
-      <div class="dark-mode-toggle def-btn">
-        <button id="dark-mode-button" onclick="toggleDarkMode()">
-          <span class="fa-solid fa-moon"></span>
-        </button>
-      </div>
-      <!-- BOTÃO AJUDA -->
-      <div class="help-button def-btn">
-        <a href="help.html">
-          <button id="help-button"><span class="fa-solid fa-question"></span></button>
-        </a>
-      </div>
-      <!-- BOTÃO CONFIG -->
-      <div class="config-button def-btn">
-        <a href="config.html">
-          <button id="config-button"><span class="fa-solid fa-gear"></span></button>
-        </a>
-      </div>
-      <!-- BOTÃO NOTIFICAÇÕES -->
-      <div class="notification-button def-btn">
-        <a href="notification.html">
-          <button id="notification-button"><span class="fa-regular fa-bell"></span></button>
-        </a>
-      </div>
-      <!-- BOTÃO PERFIL -->
-      <div class="profile-button def-btn">
-        <button id="profile-button"><span class="fa-solid fa-user"></span></button>
-      </div>
-      <!-- BOTÃO NOVO PROJETO -->
-      <div class="new-project-button">
-        <a href="new-project-page.html"><span class="fa-solid fa-plus"></span></a>
-      </div>
-    </div>
-  </div>
-</header>
+  </header>
+
+      <!--MENU DROPDOWN-->
+    <section class="dropdown-menu-section">
+        <div class="dropdown-menu hidden" id="notification-dropdown-menu">
+            oii oque isso aqui faz?
+        </div>
+        <div class="dropdown-menu hidden" id="profile-dropdown-menu">
+            <ul>
+                <?php if (isset($_SESSION['user_nome'])): ?>
+                    <li id="user-name">
+                        <a href="profile-page.php?id=<?php echo $_SESSION['user_id']; ?>">
+                        <li id="user-name"><strong><?php echo htmlspecialchars($_SESSION['user_nome']); ?></strong></li>
+                        </a>
+                    </li>
+                    <li><a href="php/logout.php">Sair</a></li>
+                <?php else: ?>
+                    <li><a href="register-page.html">Registrar</a></li>
+                    <li><a href="index.html">Entrar</a></li>
+                <?php endif; ?>
+            </ul>
+        </div>
+    </section>
 
     <main class="container">
     <section class="secao">
@@ -68,9 +90,9 @@
         <p>O Folium é uma plataforma para organizar, visualizar e compartilhar seus projetos de forma clara e intuitiva. Veja abaixo os principais recursos e como utilizá-los.</p>
         <ul>
           <li><strong>Pesquisar:</strong> Use a barra de pesquisa no topo para encontrar projetos rapidamente.</li>
-          <li><strong>Cards de Projeto:</strong> Clique em um card para visualizar detalhes, editar ou compartilhar.</li>
+          <li><strong>Cards de Projeto:</strong> Clique em um card para visualizar detalhes, denunciar ou compartilhar.</li>
           <li><strong>Botão “+”:</strong> Adicione um novo projeto com apenas um clique.</li>
-          <li><strong>Menu do Usuário:</strong> Acesse configurações, perfil ou saia da conta.</li>
+          <li><strong>Menu do Usuário:</strong> Acesse seu perfil ou saia da conta.</li>
         </ul>
       </div>
     </section>
@@ -94,9 +116,16 @@
     </section>
 
     <section class="secao">
+      <h2>Quer saber mais sobre o nosso projeto?</h2>
+      <div class="card-ajuda">
+        <p>Acesse nosso <a href="about.html">sobre</a> para saber mais sobre toda a construção do nosso projeto!</p>
+      </div>
+    </section>
+
+    <section class="secao">
       <h2>Ainda com dúvidas?</h2>
       <div class="card-ajuda">
-        <p>Entre em contato conosco pelo email <strong>suporte@folium.app</strong> ou envie uma mensagem através do formulário de contato na página de configurações.</p>
+        <p>Entre em contato conosco pela nossa DM do instagram: <a href="https://linktr.ee/folium_ejs">@folium_ejs</a> ou envie uma mensagem através do formulário de contato na página de configurações.</p>
       </div>
     </section>
   </main>
@@ -107,4 +136,23 @@
     </footer>
 </body>
 
+<script src="./js/script.js"></script>
 <script src="./js/dark-mode.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const profileBtn = document.getElementById("profile-button");
+  const profileMenu = document.getElementById("profile-dropdown-menu");
+
+  profileBtn.addEventListener("click", function () {
+    profileMenu.classList.toggle("hidden");
+  });
+
+  // Esconde ao clicar fora
+  document.addEventListener("click", function (event) {
+    if (!profileBtn.contains(event.target) && !profileMenu.contains(event.target)) {
+      profileMenu.classList.add("hidden");
+    }
+  });
+});
+</script>
+</html>
