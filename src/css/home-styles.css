@@ -80,6 +80,10 @@ main{
     margin-top: 1px;
 }
 
+.scroll-button:hover{
+    background-color: #b4b4b4;
+}
+
 .section-blocks-container{
     display: flex;
     gap: 50px;

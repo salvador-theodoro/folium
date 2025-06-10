@@ -14,33 +14,46 @@
         <div class="header-content">
             <div class="header-left-side">
                 <div class="home-button">
-                    <a href="home.html">
-                        <img src="./src/img/icons/logo1.png" alt="" class="home-button-icon" height="40px">
+                    <a href="home.php">
+                        <img src="./src/img/icons/logo1.png" alt="" class="home-button-icon" height="60px">
                     </a>
                 </div>
                 <div class="search-bar">
-                    <input type="text">
+                    <img src="./src/img/icons/lupa.png" class="search-icon" alt="Lupa">
+                    <input type="text" placeholder="Pesquisar">
                 </div>
             </div>
             <div class="header-right-side">
+                <!-- BOTÃO DARK MODE -->
+                <div class="dark-mode-toggle def-btn">
+                    <button id="dark-mode-button" onclick="toggleDarkMode()">
+                        <span class="fa-solid fa-moon"></span>
+                    </button>
+                </div>
                 <!--BOTÃO AJUDA-->
                 <div class="help-button def-btn">
+                    <a href="help.html">
                     <button id="help-button"><span class="fa-solid fa-question"></span></button>
+                    </a>
                 </div>
                 <!--BOTÃO CONFIG-->
                 <div class="config-button def-btn">
-                    <button id="config-button"><span class="fa-solid fa-gear"></span></button>
+                    <a href="config.html">
+                        <button id="config-button"><span class="fa-solid fa-gear"></span></button>
+                    </a>
                 </div>
                 <!--BOTÃO NOTIFICAÇÕES-->
                 <div class="notification-button def-btn">
-                    <button id="notification-button"><span class="fa-regular fa-bell"></span></button>
+                    <a href="notification.html">
+                        <button id="notification-button"><span class="fa-regular fa-bell"></span></button>
+                    </a>
                 </div>
                 <!--BOTÃO PERFIL-->
                 <div class="profile-button def-btn">
-                    <button id="profile-button"><span class="fa-solid fa-user"></span></button>
+                        <button id="profile-button"><span class="fa-solid fa-user"></span></button>
                 </div>
                 <!--BOTÃO NOVO PROJETO-->
-                <div class="new-button">
+                <div class="new-project-button">
                     <a href="new-project-page.html"><span class="fa-solid fa-plus"></span></a>
                 </div>
             </div>
@@ -49,14 +62,16 @@
     <!--MENU DROPDOWN-->
     <section class="dropdown-menu-section">
         <div class="dropdown-menu hidden" id="notification-dropdown-menu">
-            oii
+            oii oque isso aqui faz?
         </div>
         <div class="dropdown-menu hidden" id="profile-dropdown-menu">
             <ul>
                 <?php if (isset($_SESSION['user_nome'])): ?>
-                    <a href="profile-page.html">
-                    <li id="user-name"><strong><?php echo htmlspecialchars($_SESSION['user_nome']); ?></strong></li>
-                    </a>
+                    <li id="user-name">
+                        <a href="profile-page.php?id=<?php echo $_SESSION['user_id']; ?>">
+                        <li id="user-name"><strong><?php echo htmlspecialchars($_SESSION['user_nome']); ?></strong></li>
+                        </a>
+                    </li>
                     <li><a href="php/logout.php">Sair</a></li>
                 <?php else: ?>
                     <li><a href="register-page.html">Registrar</a></li>
@@ -92,36 +107,16 @@
                                 </a>
                             </div>
                         </div>
+                        <div class="section-line"></div>
                         <div class="step-main-content">
-                            Oiiiiiii
+                            Espaço para texto.
                         </div>
+                        <div class="section-line"></div>
                         <div class="step-footer">
-                            Aqui estarão documentos, links, etc
-                        </div>
-                    </div>
-                    <!--outra etapa-->
-                    <div class="step">
-                        <div class="step-header">
-                            <div class="step-header-text">
-                                <span class="step-name">NOME DA ETAPA</span>
-                                <span class="step-date">xx/xx/xxxx</span>
+                            <div class="step-docs">
+                                <span class="fa-solid fa-file file-icon"></span>
+                                <span class="file-text">arquivo.doc</span>
                             </div>
-                            <div class="step-header-people">
-                                <a href="profile-page.html">
-                                    <span class="fa-solid fa-circle-user"></span>
-                                    <span>Pessoa 1</span>
-                                </a>
-                                <a href="">
-                                    <span class="fa-solid fa-circle-user"></span>
-                                    <span>Pessoa 2</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="step-main-content">
-                            Oiiiiiii
-                        </div>
-                        <div class="step-footer">
-                            Aqui estarão documentos, links, etc
                         </div>
                     </div>
                     <!--outra etapa-->
@@ -142,14 +137,18 @@
                                 </a>
                             </div>
                         </div>
+                        <div class="section-line"></div>
                         <div class="step-main-content">
-                            Oiiiiiii
+                            Espaço para texto.
                         </div>
+                        <div class="section-line"></div>
                         <div class="step-footer">
-                            Aqui estarão documentos, links, etc
+                            <div class="step-docs">
+                                <span class="fa-solid fa-file file-icon"></span>
+                                <span class="file-text">arquivo.doc</span>
+                            </div>
                         </div>
                     </div>
-                </section>
             </div>
             <!-----------------------------MENU LATERAL DIREITA------------------------------------->
             <div class="main-right">
@@ -212,7 +211,20 @@
                             Maecenas condimentum tristique elit in feugiat. <br>
                         </div>
                         <div class="menu-footer">
-                            Aqui estarão mídias em geral
+                            <div class="menu-media-display">
+                                <div class="menu-media" style="border-radius: 15px 0 0 15px;">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="menu-media">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="menu-media">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="menu-media menu-media-right" style="border-radius: 0 15px 15px 0;">
+                                    <span class="fa-solid fa-plus"></span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

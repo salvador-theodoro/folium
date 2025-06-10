@@ -1,5 +1,5 @@
 body{
-    padding-top: 60px;
+    padding-top: 80px;
 }
 
 /*---------------------MAIN------------------------*/
@@ -35,7 +35,8 @@ main{
     width: 100%;
     height: 50px;
     border-radius: 15px;
-    background-color: #323232;
+    background-color: #fff;
+    box-shadow: 2px 2px 7px -5px #222;
 }
 
 .main-header-content{
@@ -44,16 +45,17 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #fff;
+    color: #222222;
 }
 
 .main-header-content span.main-header-text{
     margin-left: 10px;
+    font-size: 20px;
 }
 
 .main-header-content button{
     margin-right: 10px;
-    color: #fff;
+    color: #222;
     background: none;
     border: none;
     font-size: 20px;
@@ -73,47 +75,105 @@ main{
 .step{
     width: 100%;
     height: fit-content;
-    border: 1px solid;
     border-radius: 15px;
-    background-color: #323232;
-    color: #fff;
+    background-color: #fff;
+    color: #222;
+    box-shadow: 2px 2px 7px -5px #222;
 }
 
 .step a{
-    color: #fff;
+    color: #222;
 }
 
 .step-header{
     width: 100%;
     height: 40px;
-    border: 1px solid;
+    background-color: #fff;
+    border-radius: 15px 15px 0 0;
+}
+
+.step-header-text{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2px;
+    font-size: 16px;
+}
+
+.step-name{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.step-date{
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.step-header-people{
+    margin-left: 7px;
+}
+
+.step-header-people a{
+    text-decoration: none;
 }
 
 .step-main-content{
     width: 100%;
     height: 250px;
-    border: 1px solid;
+    padding: 0 0 0 5px;
+}
+
+.section-line{
+    width: 100%;
+    height: 0.4px;
+    background-color: #222;
+    border-radius: 100%;
+    margin: 2px 0 5px 0;
 }
 
 .step-footer{
     width: 100%;
-    height: 40px;
-    border: 1px solid;
+    height: 45px;
+    padding: 5px 10px;
+}
+
+.step-docs{
+    width: fit-content;
+    height: 34px;
+    border-radius: 15px;
+    background-color: #f0f0f0;
+    padding: 3px 5px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    align-items: center;
+    box-shadow: 2px 2px 7px -5px #222;
+    cursor: pointer;
+}
+
+.step-docs:hover{
+    background-color: #dddddd;
+}
+
+.file-icon{
+    font-size: 20px;
 }
 
 /*-----------------MENU DIREITO-------------------------*/
 
 .side-menu{
     width: 34.5%;
-    height: 87vh;
+    height: 84vh;
     position: fixed;
     border-radius: 15px;
-    background-color: #222;
-    color: #fff;
+    background-color: #fff;
+    color: #323232;
+    box-shadow: 2px 2px 7px -5px #222;
 }
 
 .side-menu a{
-    color: #fff;
+    color: #323232;
 }
 
 .side-menu-content{
@@ -131,6 +191,7 @@ main{
     height: 80px;
     overflow-y: auto;
     font-size: 17px;
+    background-color: #fff;
 }
 
 .menu-header-people span{
@@ -143,7 +204,7 @@ main{
     width: 10px;
 }
 .menu-header-people::-webkit-scrollbar-thumb{
-    background-color: #323232;
+    background-color: #f0f0f0;
     border-radius: 15px;
 }
 
@@ -164,6 +225,33 @@ main{
     width: 10px;
 }
 .menu-desc::-webkit-scrollbar-thumb{
-    background-color: #323232;
+    background-color: #f0f0f0;
     border-radius: 15px;
+}
+
+.menu-footer{
+    padding: 5px;
+}
+
+.menu-media-display{
+    width: 95%;
+    height: 50px;
+    border-radius: 15px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+
+.menu-media{
+    width: 25%;
+    height: 100%;
+    border: 1px solid;
+}
+
+.menu-media-right{
+    text-align: center;
+    align-content: center;
+    font-size: 27px;
+    margin-right: 5px;
 }
