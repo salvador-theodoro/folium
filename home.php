@@ -20,7 +20,7 @@ session_start();
         <div class="header-content">
             <div class="header-left-side">
                 <div class="home-button">
-                    <a href="home.html">
+                    <a href="home.php">
                         <img src="./src/img/icons/logo1.png" alt="" class="home-button-icon" height="40px">
                     </a>
                 </div>
@@ -60,9 +60,11 @@ session_start();
         <div class="dropdown-menu hidden" id="profile-dropdown-menu">
             <ul>
                 <?php if (isset($_SESSION['user_nome'])): ?>
-                    <a href="profile-page.html">
-                    <li id="user-name"><strong><?php echo htmlspecialchars($_SESSION['user_nome']); ?></strong></li>
-                    </a>
+                    <li id="user-name">
+                        <a href="profile-page.php?id=<?php echo $_SESSION['user_id']; ?>">
+                        <li id="user-name"><strong><?php echo htmlspecialchars($_SESSION['user_nome']); ?></strong></li>
+                        </a>
+                    </li>
                     <li><a href="php/logout.php">Sair</a></li>
                 <?php else: ?>
                     <li><a href="register-page.html">Registrar</a></li>
@@ -317,4 +319,24 @@ session_start();
     </main>
 </body>
 <script src="./js/script.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const profileBtn = document.getElementById("profile-button");
+  const profileMenu = document.getElementById("profile-dropdown-menu");
+
+  profileBtn.addEventListener("click", function () {
+    profileMenu.classList.toggle("hidden");
+  });
+
+  // Esconde ao clicar fora
+  document.addEventListener("click", function (event) {
+    if (!profileBtn.contains(event.target) && !profileMenu.contains(event.target)) {
+      profileMenu.classList.add("hidden");
+    }
+  });
+});
+</script>
+
+
 </html>

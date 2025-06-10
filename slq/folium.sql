@@ -12,8 +12,23 @@ CREATE TABLE usuarios (
 );
 
 DROP TABLE usuarios;
+DROP TABLE perfis;
 
 SELECT * FROM usuarios;
 
 TRUNCATE TABLE usuarios;
 
+
+CREATE TABLE perfis (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuario INT NOT NULL,
+    descricao TEXT,
+    instagram VARCHAR(255),
+    linkedin VARCHAR(255),
+    github VARCHAR(255),
+    imagem_perfil longblob,
+    banner_fundo longblob,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id) ON DELETE CASCADE
+);
+
+SELECT * FROM perfis WHERE id_usuario = 1;

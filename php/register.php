@@ -11,16 +11,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $confipassword = $_POST['confipassword'];
     $name = $_POST['name'];
 
-
-    // Verifica se as senhas conferem
     if ($password !== $confipassword) {
         die('As senhas não coincidem.');
     }
 
-    // Hash da senha
     $passwordHash = hash('sha256', $password);
 
-    // Verifica se e-mail já está registrado
     $check = $conn->prepare("SELECT id FROM usuarios WHERE email = ?");
     $check->bind_param("s", $email);
     $check->execute();
@@ -33,7 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $hash = sprintf('%07X', mt_rand(0,0xFFFFFFF));
 
-    // Envia o e-mail de verificação
     $mail = new PHPMailer(true);
     try {
         $mail->isSMTP();
@@ -52,13 +47,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->Body = "Olá, $name! Clique no link abaixo para verificar seu e-mail e ativar sua conta:<br>
         <a href='http://localhost/folium/php/verify_email.php?hash=$hash'>Clique aqui para verificar seu e-mail</a>";
 
-                    
         $mail->send();
 
-        // Só insere no banco se o e-mail for enviado com sucesso
+        // Insere o usuário
         $stmt = $conn->prepare("INSERT INTO usuarios (email, password1, name1, verificado, hash1) VALUES (?, ?, ?, 0, ?)");
         $stmt->bind_param("ssss", $email, $passwordHash, $name, $hash);
         $stmt->execute();
+
+        // Pega o ID do novo usuário
+        $novo_id = $stmt->insert_id;
+
+        // Cria perfil vazio para o novo usuário
+        $stmt2 = $conn->prepare("INSERT INTO perfis (id_usuario) VALUES (?)");
+        $stmt2->bind_param("i", $novo_id);
+        $stmt2->execute();
+        $stmt2->close();
 
         echo 'O e-mail de verificação foi enviado para ' . $email;
 
@@ -70,5 +73,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $conn->close();
 }
-
 ?>
