@@ -1,5 +1,5 @@
 body{
-    padding-top: 60px;
+    padding-top: 70px;
 }
 
 main{
@@ -206,7 +206,7 @@ main{
 
 /*-------------------------POP UP EDIÇÂO---------------------------*/
 
-.popup {
+.popup{
   position: fixed;
   top: 0;
   left: 0;
@@ -219,28 +219,63 @@ main{
   z-index: 999;
 }
 
-.popup-content {
-  background-color: white;
-  padding: 30px;
-  border-radius: 12px;
-  width: 90%;
-  max-width: 500px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  position: relative;
+.popup-content{
+    width: 500px;
+    height: fit-content;
+    border-radius: 15px;
+    z-index: 999;
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
-.hidden {
-  display: none;
+.hidden{
+    display: none;
 }
 
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 22px;
-  cursor: pointer;
+.popup-header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 15px;
 }
 
-.edit-profile-btn {
-  margin-top: 10px;
+.popup-header .popup-title{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.popup-header .close-btn{
+    position: fixed;
+    right: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.edit-profile-form{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 17px;
+}
+
+.text-input{
+    width: 400px;
+    border-radius: 15px;
+    background-color: #f0f0f0;
+    border: none;
+}
+
+.submit-button{
+    width: 200px;
+    margin: auto;
 }
