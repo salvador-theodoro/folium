@@ -16,10 +16,32 @@
   font-family: "Ligconsolata", sans-serif; /* 'sans-serif' como fallback se a Ligconsolata não funfar */
 }
 
-button:hover{
+button:hover {
   cursor: pointer;
 }
 
-body{
+body {
   background-color: #f0f0f0;
+}
+
+/* ============================
+   🌙 DARK MODE STYLES
+============================ */
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode input {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+body.dark-mode .dropdown-menu {
+  background-color: #2c2c2c;
+}
+
+body.dark-mode .def-btn:hover {
+  background-color: #3a3a3a;
 }

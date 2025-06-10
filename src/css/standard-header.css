@@ -150,11 +150,32 @@ header{
     color: #222222;
 }
 
-.def-btn{
+#dark-mode-button {
     width: 30px;
     height: 30px;
-    background-color: none;
     border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+}
+
+#dark-mode-button span{
+    font-size: 20px;
+    color: #222222;
+}
+
+.def-btn{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
 }
 
 .def-btn:hover{

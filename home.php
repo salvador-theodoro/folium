@@ -31,6 +31,12 @@ session_start();
                 </div>
             </div>
             <div class="header-right-side">
+                <!-- BOTÃO DARK MODE -->
+                <div class="dark-mode-toggle def-btn">
+                    <button id="dark-mode-button" onclick="toggleDarkMode()">
+                        <span class="fa-solid fa-moon"></span>
+                    </button>
+                </div>
                 <!--BOTÃO AJUDA-->
                 <div class="help-button def-btn">
                     <a href="help.html">
@@ -331,6 +337,7 @@ session_start();
     </footer>
 </body>
 <script src="./js/script.js"></script>
+<script src="./js/dark-mode.js"></script>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -349,6 +356,4 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
-
-
 </html>

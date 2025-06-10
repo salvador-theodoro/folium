@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajuda - Folium</title>
+    <link rel="stylesheet" href="./src/css/global-styles.css">
+    <link rel="stylesheet" href="./src/css/help.css">
+    <link rel="stylesheet" href="./src/css/standard-header.css">
+    <link rel="stylesheet" href="./src/css/standard-footer.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+  <div class="header-content">
+    <div class="header-left-side">
+      <div class="home-button">
+        <a href="home.php">
+          <img src="./src/img/icons/logo1.png" alt="" class="home-button-icon" height="60px">
+        </a>
+      </div>
+      <div class="search-bar">
+        <img src="./src/img/icons/lupa.png" class="search-icon" alt="Lupa">
+        <input type="text" placeholder="Pesquisar">
+      </div>
+    </div>
+    <div class="header-right-side">
+      <!-- BOTÃO DARK MODE -->
+      <div class="dark-mode-toggle def-btn">
+        <button id="dark-mode-button" onclick="toggleDarkMode()">
+          <span class="fa-solid fa-moon"></span>
+        </button>
+      </div>
+      <!-- BOTÃO AJUDA -->
+      <div class="help-button def-btn">
+        <a href="help.html">
+          <button id="help-button"><span class="fa-solid fa-question"></span></button>
+        </a>
+      </div>
+      <!-- BOTÃO CONFIG -->
+      <div class="config-button def-btn">
+        <a href="config.html">
+          <button id="config-button"><span class="fa-solid fa-gear"></span></button>
+        </a>
+      </div>
+      <!-- BOTÃO NOTIFICAÇÕES -->
+      <div class="notification-button def-btn">
+        <a href="notification.html">
+          <button id="notification-button"><span class="fa-regular fa-bell"></span></button>
+        </a>
+      </div>
+      <!-- BOTÃO PERFIL -->
+      <div class="profile-button def-btn">
+        <button id="profile-button"><span class="fa-solid fa-user"></span></button>
+      </div>
+      <!-- BOTÃO NOVO PROJETO -->
+      <div class="new-project-button">
+        <a href="new-project-page.html"><span class="fa-solid fa-plus"></span></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <main class="container">
+    <section class="secao">
+      <h2>Como usar o Folium</h2>
+      <div class="card-ajuda">
+        <p>O Folium é uma plataforma para organizar, visualizar e compartilhar seus projetos de forma clara e intuitiva. Veja abaixo os principais recursos e como utilizá-los.</p>
+        <ul>
+          <li><strong>Pesquisar:</strong> Use a barra de pesquisa no topo para encontrar projetos rapidamente.</li>
+          <li><strong>Cards de Projeto:</strong> Clique em um card para visualizar detalhes, editar ou compartilhar.</li>
+          <li><strong>Botão “+”:</strong> Adicione um novo projeto com apenas um clique.</li>
+          <li><strong>Menu do Usuário:</strong> Acesse configurações, perfil ou saia da conta.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="secao">
+      <h2>Dúvidas Frequentes (FAQ)</h2>
+      <div class="card-ajuda">
+        <div class="faq">
+          <h3>📁 Como criar um novo projeto?</h3>
+          <p>Clique no botão roxo "+" no canto superior direito e preencha as informações do projeto.</p>
+        </div>
+        <div class="faq">
+          <h3>🎨 Como personalizar a aparência do projeto?</h3>
+          <p>Após criar um projeto, vá até a página de edição e escolha temas, cores e imagens de capa.</p>
+        </div>
+        <div class="faq">
+          <h3>🔒 Meus projetos são privados?</h3>
+          <p>Sim. Seus projetos são privados por padrão. Você pode torná-los públicos nas configurações.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao">
+      <h2>Ainda com dúvidas?</h2>
+      <div class="card-ajuda">
+        <p>Entre em contato conosco pelo email <strong>suporte@folium.app</strong> ou envie uma mensagem através do formulário de contato na página de configurações.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+        <p><strong>Folium</strong> &copy; 2025. Todos os direitos reservados.</p>
+        <a href="https://linktr.ee/folium_ejs" target="_blank">Siga-nos nas nossas redes sociais</a>
+    </footer>
+</body>
+
+<script src="./js/dark-mode.js"></script>
