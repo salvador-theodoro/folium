@@ -160,3 +160,48 @@ main{
     margin-right: 15px;
     color: #323232;
 }
+
+/* ------- DARK MODE: PÁGINA PRINCIPAL ------- */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark-mode .section-title-text {
+  color: #c3b1f3;
+}
+
+body.dark-mode .section-title-line {
+  background-color: #715ebc;
+}
+
+body.dark-mode .scroll-button {
+  background: #2e2e2e;
+  color: #f0f0f0;
+}
+
+body.dark-mode .project-block {
+  background-color: #2c2c2c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .project-block:hover .project-footer {
+  background-color: #3a3a3a;
+}
+
+body.dark-mode .project-footer {
+  background-color: #2c2c2c;
+}
+
+body.dark-mode .project-footer .project-name {
+  color: #f0f0f0;
+}
+
+body.dark-mode .project-footer button span {
+  color: #f0f0f0;
+}
+
+/* Garantindo contraste em elementos clicáveis */
+body.dark-mode a {
+  color: #d0bfff;
+}

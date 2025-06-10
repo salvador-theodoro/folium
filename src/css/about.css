@@ -42,3 +42,5 @@ h2 {
 .card-style li {
   margin-bottom: 8px;
 }
+
+@import url('../css/dark-mode.css');

@@ -1,0 +1,118 @@
+/* dark-mode.css */
+body.dark-mode {
+  background-color: #363636;
+  color: #f0f0f0;
+}
+
+body.dark-mode input {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+body.dark-mode .dropdown-menu {
+  background-color: #2c2c2c;
+}
+
+body.dark-mode .def-btn:hover {
+  background-color: #3a3a3a;
+}
+
+body.dark-mode .card-style {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+}
+
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #cba6f7;
+}
+
+header.dark-mode {
+    background-color: #cba6f7;
+    color: #f0f0f0;
+}
+
+/* ------- DARK MODE: HEADER ------- */
+body.dark-mode header {
+  background-color: #1f1f1f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .search-bar input {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+}
+
+body.dark-mode .search-bar input::placeholder {
+  color: #ffffff;
+}
+
+body.dark-mode #notification-button span,
+body.dark-mode #profile-button span,
+body.dark-mode #config-button span,
+body.dark-mode #help-button span,
+body.dark-mode #dark-mode-button span {
+  color: #f0f0f0;
+}
+
+body.dark-mode .def-btn:hover {
+  background-color: #3a3a3a;
+}
+
+body.dark-mode .new-project-button {
+  background-color: #7127d8;
+}
+
+body.dark-mode .new-project-button:hover {
+  background-color: #7127d8;
+}
+
+/* ------- DARK MODE: DROPDOWN MENU ------- */
+body.dark-mode .dropdown-menu {
+  background-color: #2a2a2a;
+  box-shadow: 2px 2px 7px -3px #000000;
+}
+
+body.dark-mode .dropdown-menu a,
+body.dark-mode #profile-dropdown-menu ul li #user-name {
+  color: #f0f0f0;
+}
+
+/* -----------DARK MODE: FOOTER---------- */
+body.dark-mode footer{
+  background-color: #1f1f1f;
+  color: #f0f0f0;
+}
+
+body.about-page.dark-mode {
+  background: url("../img/Plain-Purple-Background.jpg");
+}
+
+/* -----------DARK MODE: HELP PAGE----------- */
+body.help-page.dark-mode {
+  background: url("../img/Plain-Purple-Background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #f0f0f0;
+}
+
+body.help-page.dark-mode .card-ajuda {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+}
+
+body.help-page.dark-mode .card-ajuda p,
+body.help-page.dark-mode .card-ajuda li,
+body.help-page.dark-mode .card-ajuda ul {
+  color: #f0f0f0;
+}
+
+body.help-page.dark-mode h2,
+body.help-page.dark-mode .faq h3 {
+  color: #cba6f7;
+}
+
+body.help-page.dark-mode .faq p {
+  color: #f0f0f0;
+}
