@@ -9,10 +9,11 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Inicial</title>
+    <title>Folium</title>
     <link rel="stylesheet" href="./src/css/global-styles.css">
     <link rel="stylesheet" href="./src/css/home-styles.css">
     <link rel="stylesheet" href="./src/css/standard-header.css">
+    <link rel="stylesheet" href="./src/css/standard-footer.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -21,32 +22,39 @@ session_start();
             <div class="header-left-side">
                 <div class="home-button">
                     <a href="home.php">
-                        <img src="./src/img/icons/logo1.png" alt="" class="home-button-icon" height="40px">
+                        <img src="./src/img/icons/logo1.png" alt="" class="home-button-icon" height="60px">
                     </a>
                 </div>
                 <div class="search-bar">
-                    <input type="text">
+                    <img src="./src/img/icons/lupa.png" class="search-icon" alt="Lupa">
+                    <input type="text" placeholder="Pesquisar">
                 </div>
             </div>
             <div class="header-right-side">
                 <!--BOTÃO AJUDA-->
                 <div class="help-button def-btn">
+                    <a href="help.html">
                     <button id="help-button"><span class="fa-solid fa-question"></span></button>
+                    </a>
                 </div>
                 <!--BOTÃO CONFIG-->
                 <div class="config-button def-btn">
-                    <button id="config-button"><span class="fa-solid fa-gear"></span></button>
+                    <a href="config.html">
+                        <button id="config-button"><span class="fa-solid fa-gear"></span></button>
+                    </a>
                 </div>
                 <!--BOTÃO NOTIFICAÇÕES-->
                 <div class="notification-button def-btn">
-                    <button id="notification-button"><span class="fa-regular fa-bell"></span></button>
+                    <a href="notification.html">
+                        <button id="notification-button"><span class="fa-regular fa-bell"></span></button>
+                    </a>
                 </div>
                 <!--BOTÃO PERFIL-->
                 <div class="profile-button def-btn">
-                    <button id="profile-button"><span class="fa-solid fa-user"></span></button>
+                        <button id="profile-button"><span class="fa-solid fa-user"></span></button>
                 </div>
                 <!--BOTÃO NOVO PROJETO-->
-                <div class="new-button">
+                <div class="new-project-button">
                     <a href="new-project-page.html"><span class="fa-solid fa-plus"></span></a>
                 </div>
             </div>
@@ -55,7 +63,7 @@ session_start();
     <!--MENU DROPDOWN-->
     <section class="dropdown-menu-section">
         <div class="dropdown-menu hidden" id="notification-dropdown-menu">
-            oii
+            oii oque isso aqui faz?
         </div>
         <div class="dropdown-menu hidden" id="profile-dropdown-menu">
             <ul>
@@ -89,7 +97,7 @@ session_start();
                             <a href="project-page.html">
                                 <div class="project-block">
                                     <div class="project-img">
-                                        <img src="./src/img/standard-img.jpg" alt="">
+                                        <img src="./src/img/icons/project-image.png" alt="">
                                     </div>
                                     <div class="project-footer">
                                         <div class="project-name">
@@ -102,7 +110,7 @@ session_start();
                             <a href="project-page.html">
                                 <div class="project-block">
                                     <div class="project-img">
-                                        <img src="./src/img/standard-img.jpg" alt="">
+                                        <img src="./src/img/icons/project-image2.png" alt="">
                                     </div>
                                     <div class="project-footer">
                                         <div class="project-name">
@@ -115,7 +123,7 @@ session_start();
                             <a href="project-page.html">
                                 <div class="project-block">
                                     <div class="project-img">
-                                        <img src="./src/img/standard-img.jpg" alt="">
+                                        <img src="./src/img/icons/project-image.png" alt="">
                                     </div>
                                     <div class="project-footer">
                                         <div class="project-name">
@@ -128,7 +136,7 @@ session_start();
                             <a href="project-page.html">
                                 <div class="project-block">
                                     <div class="project-img">
-                                        <img src="./src/img/standard-img.jpg" alt="">
+                                        <img src="./src/img/icons/project-image2.png" alt="">
                                     </div>
                                     <div class="project-footer">
                                         <div class="project-name">
@@ -141,7 +149,7 @@ session_start();
                             <a href="project-page.html">
                                 <div class="project-block">
                                     <div class="project-img">
-                                        <img src="./src/img/standard-img.jpg" alt="">
+                                        <img src="./src/img/icons/project-image.png" alt="">
                                     </div>
                                     <div class="project-footer">
                                         <div class="project-name">
@@ -159,7 +167,7 @@ session_start();
             <div class="main-sub-section">
                 <div class="section-title">
                     <div class="section-title-text">
-                        <span>Recentes</span>
+                        <span>Em destaque</span>
                     </div>
                     <div class="section-title-line"></div>
                 </div>
@@ -169,7 +177,7 @@ session_start();
                             <a href="project-page.html">
                                 <div class="project-block">
                                     <div class="project-img">
-                                        <img src="./src/img/standard-img.jpg" alt="">
+                                        <img src="./src/img/icons/project-image2.png" alt="">
                                     </div>
                                     <div class="project-footer">
                                         <div class="project-name">
@@ -182,7 +190,7 @@ session_start();
                             <a href="project-page.html">
                                 <div class="project-block">
                                     <div class="project-img">
-                                        <img src="./src/img/standard-img.jpg" alt="">
+                                        <img src="./src/img/icons/project-image.png" alt="">
                                     </div>
                                     <div class="project-footer">
                                         <div class="project-name">
@@ -195,7 +203,7 @@ session_start();
                             <a href="project-page.html">
                                 <div class="project-block">
                                     <div class="project-img">
-                                        <img src="./src/img/standard-img.jpg" alt="">
+                                        <img src="./src/img/icons/project-image2.png" alt="">
                                     </div>
                                     <div class="project-footer">
                                         <div class="project-name">
@@ -208,7 +216,7 @@ session_start();
                             <a href="project-page.html">
                                 <div class="project-block">
                                     <div class="project-img">
-                                        <img src="./src/img/standard-img.jpg" alt="">
+                                        <img src="./src/img/icons/project-image.png" alt="">
                                     </div>
                                     <div class="project-footer">
                                         <div class="project-name">
@@ -221,7 +229,7 @@ session_start();
                             <a href="project-page.html">
                                 <div class="project-block">
                                     <div class="project-img">
-                                        <img src="./src/img/standard-img.jpg" alt="">
+                                        <img src="./src/img/icons/project-image2.png" alt="">
                                     </div>
                                     <div class="project-footer">
                                         <div class="project-name">
@@ -239,7 +247,7 @@ session_start();
             <div class="main-sub-section">
                 <div class="section-title">
                     <div class="section-title-text">
-                        <span>Recentes</span>
+                        <span>Mais populares</span>
                     </div>
                     <div class="section-title-line"></div>
                 </div>
@@ -249,7 +257,7 @@ session_start();
                             <a href="project-page.html">
                                 <div class="project-block">
                                     <div class="project-img">
-                                        <img src="./src/img/standard-img.jpg" alt="">
+                                        <img src="./src/img/icons/project-image.png" alt="">
                                     </div>
                                     <div class="project-footer">
                                         <div class="project-name">
@@ -262,7 +270,7 @@ session_start();
                             <a href="project-page.html">
                                 <div class="project-block">
                                     <div class="project-img">
-                                        <img src="./src/img/standard-img.jpg" alt="">
+                                        <img src="./src/img/icons/project-image2.png" alt="">
                                     </div>
                                     <div class="project-footer">
                                         <div class="project-name">
@@ -275,7 +283,7 @@ session_start();
                             <a href="project-page.html">
                                 <div class="project-block">
                                     <div class="project-img">
-                                        <img src="./src/img/standard-img.jpg" alt="">
+                                        <img src="./src/img/icons/project-image.png" alt="">
                                     </div>
                                     <div class="project-footer">
                                         <div class="project-name">
@@ -288,7 +296,7 @@ session_start();
                             <a href="project-page.html">
                                 <div class="project-block">
                                     <div class="project-img">
-                                        <img src="./src/img/standard-img.jpg" alt="">
+                                        <img src="./src/img/icons/project-image2.png" alt="">
                                     </div>
                                     <div class="project-footer">
                                         <div class="project-name">
@@ -301,7 +309,7 @@ session_start();
                             <a href="project-page.html">
                                 <div class="project-block">
                                     <div class="project-img">
-                                        <img src="./src/img/standard-img.jpg" alt="">
+                                        <img src="./src/img/icons/project-image.png" alt="">
                                     </div>
                                     <div class="project-footer">
                                         <div class="project-name">
@@ -317,6 +325,10 @@ session_start();
             </div>
         </div>
     </main>
+    <footer class="footer">
+        <p><strong>Folium</strong> &copy; 2025. Todos os direitos reservados.</p>
+        <a href="https://linktr.ee/folium_ejs" target="_blank">Siga-nos nas nossas redes sociais</a>
+    </footer>
 </body>
 <script src="./js/script.js"></script>
 

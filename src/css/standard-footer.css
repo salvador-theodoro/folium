@@ -1,0 +1,32 @@
+* {
+  font-family: "Ligconsolata", sans-serif;
+  font-weight: bold; /* 'sans-serif' como fallback se a Ligconsolata não funfar */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*-----------------FOOTER----------------*/
+
+footer {
+  background-color: #ffffff;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  height: 60px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+  color: #4fc3f7;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
