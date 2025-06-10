@@ -185,7 +185,7 @@ header{
 .new-project-button {
     width: 40px;
     height: 40px;
-    background-color: #8752D2;
+    background-color: #7127d8;
     border-radius: 50%;
     border: none;
     margin-right: 20px;
@@ -196,7 +196,7 @@ header{
 }
 
 .new-project-button:hover {
-    background-color: #975ce9;
+    background-color: #7127d8;
     transform: rotate(180deg);
 }
 
@@ -248,3 +248,5 @@ header{
 #notification-dropdown-menu{
     right: 100px;
 }
+
+@import url('../css/dark-mode.css');
