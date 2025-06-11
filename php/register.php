@@ -63,8 +63,83 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt2->execute();
         $stmt2->close();
 
-        header("Location: ../index.html");
-        exit;
+            echo <<<HTML
+            <!DOCTYPE html>
+            <html lang="pt-BR">
+            <head>
+            <meta charset="UTF-8" />
+            <title>Registro concluído</title>
+            <style>
+                /* Pop-up overlay e container */
+                .popup-overlay {
+                position: fixed;
+                top: 0; left: 0; width: 100%; height: 100%;
+                background: rgba(0, 0, 0, 0.6);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 2000;
+                font-family: "Ligconsolata", sans-serif;
+                font-weight: bold;
+                }
+
+                /* Caixa do pop-up */
+                .popup {
+                background-color: #f7f7f7; /* igual header */
+                padding: 30px 40px;
+                border-radius: 30px;
+                box-shadow: 0 0 20px #00000055;
+                max-width: 400px;
+                width: 90%;
+                text-align: center;
+                color: #000000;
+                }
+
+                /* Título */
+                .popup h2 {
+                margin-top: 0;
+                font-size: 28px;
+                margin-bottom: 15px;
+                }
+
+                /* Texto */
+                .popup p {
+                font-size: 16px;
+                margin-bottom: 25px;
+                }
+
+                /* Botão */
+                .popup button {
+                background-color: #8752D2; /* sua cor roxa */
+                border: none;
+                border-radius: 50px;
+                padding: 12px 25px;
+                color: white;
+                font-weight: bold;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                font-family: "Ligconsolata", sans-serif;
+                }
+
+                .popup button:hover {
+                background-color: #6b3bb8; /* roxo mais escuro */
+                }
+
+            </style>
+            </head>
+            <body>
+            <div class="popup-overlay">
+                <div class="popup">
+                <h2>Registro concluído</h2>
+                <p>O código foi enviado para seu e-mail. Verifique para ativar sua conta.</p>
+                <button onclick="window.location.href='../index.html'">Ir para Login</button>
+                </div>
+            </div>
+            </body>
+            </html>
+            HTML;
+exit;
 
         $stmt->close();
 
