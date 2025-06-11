@@ -63,7 +63,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt2->execute();
         $stmt2->close();
 
-        echo 'O e-mail de verificação foi enviado para ' . $email;
+        header("Location: ../index.html");
+        exit;
 
         $stmt->close();
 
@@ -73,4 +74,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $conn->close();
 }
+?>
+
 ?>

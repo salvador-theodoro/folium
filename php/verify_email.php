@@ -22,7 +22,10 @@ if (isset($_GET['hash'])) {
             $update->execute();
             $update->close();
 
-            echo "E-mail verificado com sucesso! Agora você pode fazer login.";
+            echo "<script>
+            alert('E-mail verificado com sucesso! Agora você pode fazer login.');
+            window.location.href = '../index.html';
+            </script>";
         }
     } else {
         echo "Hash não encontrado.";

@@ -3,13 +3,18 @@ session_start();
 require 'php/db.php'; // conexão $conn
 
 // Verifica se o usuário está logado
-if (!isset($_SESSION['user_id'])) {
+if (!isset($_GET['id']) && !isset($_SESSION['user_id'])) {
     header("Location: home.php");
     exit;
 }
 
 // Pega o ID do perfil da URL, ou usa o logado
-$perfil_id = isset($_GET['id']) ? intval($_GET['id']) : $_SESSION['user_id'];
+$perfil_id = isset($_GET['id']) ? intval($_GET['id']) : (isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0);
+
+$usuario_logado = $_SESSION['user_id'] ?? null;
+$eh_dono = $usuario_logado == $perfil_id;
+
+
 
 // Exibir imagem direto do banco
 if (isset($_GET['exibir_imagem']) && isset($_GET['id']) && isset($_GET['type'])) {
@@ -127,7 +132,7 @@ if (!$perfil) {
 
   <!-- Editar Perfil -->
 
-  <?php if ($_SESSION['user_id'] == $perfil['id_usuario']): ?>
+  <?php if (isset($_SESSION['user_id']) && $_SESSION['user_id'] == $perfil['id_usuario']): ?>
   <div class="edit-profile-btn">
     <button onclick="abrirPopup()">Editar Perfil</button>
   </div>
@@ -181,7 +186,7 @@ if (!$perfil) {
       <!--caixa da bio-->
       <div class="bio-box">
         <span class="bio-title">Descrição</span>
-        <span class="bio-text"><?= nl2br(htmlspecialchars($perfil['descricao'])) ?></span>
+        <span class="bio-text"><?= nl2br(htmlspecialchars($perfil['descricao'] ?? '')) ?></span>
         <div class="bio-links">
           <span class="links-title">Links</span>
           <?php if (!empty($perfil['instagram'])): ?>
