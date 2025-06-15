@@ -116,3 +116,143 @@ body.help-page.dark-mode .faq h3 {
 body.help-page.dark-mode .faq p {
   color: #f0f0f0;
 }
+
+/* ---------- DARK MODE: PROJECT PAGE ---------- */
+body.dark-mode {
+  background-color: #1f1f1f;
+  color: #f0f0f0;
+}
+
+body.dark-mode .main-header {
+  background-color: #2a2a2a;
+  box-shadow: 2px 2px 7px -5px #000;
+}
+
+body.dark-mode .main-header-content {
+  color: #f0f0f0;
+}
+
+body.dark-mode .main-header-content button {
+  color: #f0f0f0;
+}
+
+body.dark-mode .step {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  box-shadow: 2px 2px 7px -5px #000;
+}
+
+body.dark-mode .step a {
+  color: #cba6f7;
+}
+
+body.dark-mode .step-header {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode .section-line {
+  background-color: #555;
+}
+
+body.dark-mode .step-docs {
+  background-color: #3a3a3a;
+  color: #f0f0f0;
+  box-shadow: 2px 2px 7px -5px #000;
+}
+
+body.dark-mode .step-docs:hover {
+  background-color: #505050;
+}
+
+body.dark-mode .side-menu {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  box-shadow: 2px 2px 7px -5px #000;
+}
+
+body.dark-mode .side-menu a {
+  color: #cba6f7;
+}
+
+body.dark-mode .menu-header-people {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode .menu-header-people::-webkit-scrollbar-thumb,
+body.dark-mode .menu-desc::-webkit-scrollbar-thumb {
+  background-color: #555;
+}
+
+body.dark-mode .menu-desc {
+  background-color: transparent;
+}
+
+body.dark-mode .menu-media-display {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .menu-media {
+  border-color: #cba6f7;
+}
+
+body.dark-mode .menu-media-right {
+  color: #cba6f7;
+}
+
+/* ---------- DARK MODE: PROFILE PAGE ---------- */
+body.dark-mode {
+  background-color: #1f1f1f;
+  color: #f0f0f0;
+}
+
+body.dark-mode .bio-box {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+}
+
+body.dark-mode .bio-links a {
+  color: #cba6f7;
+}
+
+body.dark-mode .project-block:hover .project-footer {
+  background-color: #3a3a3a;
+}
+
+body.dark-mode .project-footer {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode .project-footer .project-name,
+body.dark-mode .project-footer button span {
+  color: #f0f0f0;
+}
+
+body.dark-mode .popup-content {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .text-input {
+  background-color: #3a3a3a;
+  color: #f0f0f0;
+}
+
+body.dark-mode .submit-button {
+  background-color: #7127d8;
+  color: #f0f0f0;
+}
+
+body.dark-mode .popup-header .popup-title {
+  color: #cba6f7;
+}
+
+body.dark-mode .popup-header .close-btn {
+  color: #f0f0f0;
+}
+
+body.dark-mode .projects-section-title,
+body.dark-mode .links-title,
+body.dark-mode .bio-title {
+  color: #cba6f7;
+}

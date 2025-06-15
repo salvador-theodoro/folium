@@ -62,6 +62,8 @@ if (!$perfil) {
   <link rel="stylesheet" href="./src/css/global-styles.css">
   <link rel="stylesheet" href="./src/css/standard-header.css">
   <link rel="stylesheet" href="./src/css/profile-page-styles.css">
+  <link rel="stylesheet" href="./src/css/standard-footer.css">
+  <link rel="stylesheet" href="./src/css/dark-mode.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -79,10 +81,16 @@ if (!$perfil) {
                 </div>
             </div>
             <div class="header-right-side">
+                <!-- BOTÃO DARK MODE -->
+                <div class="dark-mode-toggle def-btn">
+                    <button id="dark-mode-button" onclick="toggleDarkMode()">
+                        <span class="fa-solid fa-moon"></span>
+                    </button>
+                </div>
                 <!--BOTÃO AJUDA-->
                 <div class="help-button def-btn">
                     <a href="help.html">
-                    <button id="help-button"><span class="fa-solid fa-question"></span></button>
+                        <button id="help-button"><span class="fa-solid fa-question"></span></button>
                     </a>
                 </div>
                 <!--BOTÃO CONFIG-->
@@ -232,6 +240,12 @@ if (!$perfil) {
     </div>
   </main>
 
+<!---------------------FOOTER-------------------------->
+  <footer class="footer">
+        <p><strong>Folium</strong> &copy; 2025. Todos os direitos reservados.</p>
+        <a href="https://linktr.ee/folium_ejs" target="_blank">Siga-nos nas nossas redes sociais</a>
+  </footer>
+
   <script>
     function abrirPopup() {
       document.getElementById("popup-editar-perfil").classList.remove("hidden");
@@ -240,5 +254,27 @@ if (!$perfil) {
       document.getElementById("popup-editar-perfil").classList.add("hidden");
     }
   </script>
+
 </body>
+
+<script src="./js/script.js"></script>
+<script src="./js/dark-mode.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const profileBtn = document.getElementById("profile-button");
+    const profileMenu = document.getElementById("profile-dropdown-menu");
+
+    profileBtn.addEventListener("click", function () {
+      profileMenu.classList.toggle("hidden");
+    });
+
+    // Esconde ao clicar fora
+    document.addEventListener("click", function (event) {
+      if (!profileBtn.contains(event.target) && !profileMenu.contains(event.target)) {
+        profileMenu.classList.add("hidden");
+      }
+    });
+  });
+</script>
+
 </html>

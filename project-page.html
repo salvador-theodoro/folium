@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./src/css/global-styles.css">
     <link rel="stylesheet" href="./src/css/standard-header.css">
     <link rel="stylesheet" href="./src/css/project-page-styles.css">
+    <link rel="stylesheet" href="./src/css/standard-footer.css">
+    <link rel="stylesheet" href="./src/css/dark-mode.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -233,4 +235,23 @@
     </main>
 </body>
 <script src="./js/script.js"></script>
+<script src="./js/dark-mode.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const profileBtn = document.getElementById("profile-button");
+  const profileMenu = document.getElementById("profile-dropdown-menu");
+
+  profileBtn.addEventListener("click", function () {
+    profileMenu.classList.toggle("hidden");
+  });
+
+  // Esconde ao clicar fora
+  document.addEventListener("click", function (event) {
+    if (!profileBtn.contains(event.target) && !profileMenu.contains(event.target)) {
+      profileMenu.classList.add("hidden");
+    }
+  });
+});
+</script>
 </html>

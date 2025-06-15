@@ -41,7 +41,7 @@ session_start();
                 <!--BOTÃO AJUDA-->
                 <div class="help-button def-btn">
                     <a href="help.html">
-                    <button id="help-button"><span class="fa-solid fa-question"></span></button>
+                        <button id="help-button"><span class="fa-solid fa-question"></span></button>
                     </a>
                 </div>
                 <!--BOTÃO CONFIG-->
