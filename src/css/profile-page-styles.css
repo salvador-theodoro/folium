@@ -1,281 +1,281 @@
-body{
-    padding-top: 70px;
+body {
+  padding-top: 70px;
 }
 
-main{
-    width: 100%;
-    height: 100%;
+main {
+  width: 100%;
+  height: 100%;
 }
 
-.main-content{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+.main-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /*--------------------HEADER------------------------*/
 
-.profile-header{
-    width: 100%;
-    height: 260px;
-    position: relative;
+.profile-header {
+  width: 100%;
+  height: 260px;
+  position: relative;
 }
 
-.header-image{
-    width: 100%;
-    height: 200px;
-    position: absolute;
-    top: 0;
-    left: 0;
+.header-image {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.header-image img{
-    width: 100%;
-    height: 100%;
+.header-image img {
+  width: 100%;
+  height: 100%;
 }
 
-.profile-pic{
-    z-index: 900;
-    position: absolute;
-    left: 50px;
-    top: 75px;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+.profile-pic {
+  z-index: 900;
+  position: absolute;
+  left: 50px;
+  top: 75px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
 }
 
-.profile-pic button{
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.profile-pic button {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.profile-pic button img{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 3px solid;
+.profile-pic button img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid;
 }
 
-.profile-name{
-    position: absolute;
-    bottom: 0;
-    left: 300px;
-    font-size: 50px;
+.profile-name {
+  position: absolute;
+  bottom: 0;
+  left: 300px;
+  font-size: 50px;
 }
 
 /*---------------------BIO-------------------------------*/
 
-.bio-box{
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    height: fit-content;
-    border-radius: 15px;
-    padding: 10px;
-    margin: auto;
-    margin-top: 22px;
-    color: #323232;
-    background-color: #fff;
+.bio-box {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: fit-content;
+  border-radius: 15px;
+  padding: 10px;
+  margin: auto;
+  margin-top: 22px;
+  color: #323232;
+  background-color: #fff;
 }
 
-.bio-title{
-    font-weight: bolder;
-    font-size: 20px;
-    margin-bottom: 5px;
+.bio-title {
+  font-weight: bolder;
+  font-size: 20px;
+  margin-bottom: 5px;
 }
 
-.bio-links{
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    margin: 7px 0 0 0;
+.bio-links {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin: 7px 0 0 0;
 }
 
-.links-title{
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 5px;
+.links-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
-.bio-links a{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    text-decoration: none;
-    color: #8752D2;
-    width: fit-content;
+.bio-links a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #8752d2;
+  width: fit-content;
 }
 
-.bio-links a img{
-    height: 20px;
+.bio-links a img {
+  height: 20px;
 }
 
 /*-----------------------sessão projetos------------------------*/
 
-.projects-section{
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    margin: 25px 0 0 0;
-    width: 100%;
-    height: fit-content;
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 25px 0 0 0;
+  width: 100%;
+  height: fit-content;
 }
 
-.projects-section-title{
-    font-size: 30px;
-    font-weight: bolder;
-    margin-left: 5%;
+.projects-section-title {
+  font-size: 30px;
+  font-weight: bolder;
+  margin-left: 5%;
 }
 
-.projects-display{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    align-items: center;
-    gap: 5%;
-    justify-content: center;
-    flex-wrap: wrap;
+.projects-display {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  gap: 5%;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /*-------------------------BLOCOS DE PROJETO---------------------------*/
 
-.project-block{
-    width: 350px;
-    height: 200px;
-    flex-shrink: 0;
-    border: 0px solid #000;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 25px;
+.project-block {
+  width: 350px;
+  height: 200px;
+  flex-shrink: 0;
+  border: 0px solid #000;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
 }
 
-.project-block:hover .project-footer{
-    background-color: #e0e0e0;
+.project-block:hover .project-footer {
+  background-color: #e0e0e0;
 }
 
-.project-img{
-    border-radius: 15px 15px 0 0;
-    width: 100%;
-    height: 150px;
-    align-self: center;
+.project-img {
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+  height: 150px;
+  align-self: center;
 }
 
-.project-img img{
-    height: 100%;
-    width: 100%;
-    border-radius: 15px 15px 0 0;
+.project-img img {
+  height: 100%;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
 }
 
-.project-footer{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: #fff;
-    border-radius: 0 0 15px 15px;
+.project-footer {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 0 0 15px 15px;
 }
 
-.project-footer .project-name{
-    margin-left: 15px;
-    margin-top: 15px;
-    color: #323232;
-    font-weight: bold;
+.project-footer .project-name {
+  margin-left: 15px;
+  margin-top: 15px;
+  color: #323232;
+  font-weight: bold;
 }
 
-.project-footer button{
-    width: 15px;
-    background: none;
-    display: inline-flex;
-    justify-content: center;
-    border: none;
+.project-footer button {
+  width: 15px;
+  background: none;
+  display: inline-flex;
+  justify-content: center;
+  border: none;
 }
 
-.project-footer button span{
-    margin-top: 18px;
-    margin-right: 15px;
-    color: #323232;
+.project-footer button span {
+  margin-top: 18px;
+  margin-right: 15px;
+  color: #323232;
 }
 
 /*-------------------------POP UP EDIÇÂO---------------------------*/
 
-.popup{
+.popup {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 999;
 }
 
-.popup-content{
-    width: 500px;
-    height: fit-content;
-    border-radius: 15px;
-    z-index: 999;
-    position: fixed;
-    top: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #fff;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+.popup-content {
+  width: 500px;
+  height: fit-content;
+  border-radius: 15px;
+  z-index: 999;
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
-.hidden{
-    display: none;
+.hidden {
+  display: none;
 }
 
-.popup-header{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 5px;
-    margin-bottom: 15px;
+.popup-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 15px;
 }
 
-.popup-header .popup-title{
-    font-size: 20px;
-    font-weight: bold;
+.popup-header .popup-title {
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.popup-header .close-btn{
-    position: fixed;
-    right: 10px;
-    font-size: 25px;
-    cursor: pointer;
+.popup-header .close-btn {
+  position: fixed;
+  right: 10px;
+  font-size: 25px;
+  cursor: pointer;
 }
 
-.edit-profile-form{
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    font-size: 17px;
+.edit-profile-form {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 17px;
 }
 
-.text-input{
-    width: 400px;
-    border-radius: 15px;
-    background-color: #f0f0f0;
-    border: none;
+.text-input {
+  width: 400px;
+  border-radius: 15px;
+  background-color: #f0f0f0;
+  border: none;
 }
 
-.submit-button{
-    width: 200px;
-    margin: auto;
+.submit-button {
+  width: 200px;
+  margin: auto;
 }

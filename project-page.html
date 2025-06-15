@@ -1,257 +1,309 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projeto</title>
-    <link rel="stylesheet" href="./src/css/global-styles.css">
-    <link rel="stylesheet" href="./src/css/standard-header.css">
-    <link rel="stylesheet" href="./src/css/project-page-styles.css">
-    <link rel="stylesheet" href="./src/css/standard-footer.css">
-    <link rel="stylesheet" href="./src/css/dark-mode.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="./src/css/global-styles.css" />
+    <link rel="stylesheet" href="./src/css/standard-header.css" />
+    <link rel="stylesheet" href="./src/css/project-page-styles.css" />
+    <link rel="stylesheet" href="./src/css/standard-footer.css" />
+    <link rel="stylesheet" href="./src/css/dark-mode.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
     <header>
-        <div class="header-content">
-            <div class="header-left-side">
-                <div class="home-button">
-                    <a href="./home.php">
-                        <img src="./src/img/icons/logo1.png" alt="" class="home-button-icon" height="60px">
-                    </a>
-                </div>
-                <div class="search-bar">
-                    <img src="./src/img/icons/lupa.png" class="search-icon" alt="Lupa">
-                    <input type="text" placeholder="Pesquisar">
-                </div>
-            </div>
-            <div class="header-right-side">
-                <!-- BOTÃO DARK MODE -->
-                <div class="dark-mode-toggle def-btn">
-                    <button id="dark-mode-button" onclick="toggleDarkMode()">
-                        <span class="fa-solid fa-moon"></span>
-                    </button>
-                </div>
-                <!--BOTÃO AJUDA-->
-                <div class="help-button def-btn">
-                    <a href="help.html">
-                    <button id="help-button"><span class="fa-solid fa-question"></span></button>
-                    </a>
-                </div>
-                <!--BOTÃO CONFIG-->
-                <div class="config-button def-btn">
-                    <a href="config.html">
-                        <button id="config-button"><span class="fa-solid fa-gear"></span></button>
-                    </a>
-                </div>
-                <!--BOTÃO NOTIFICAÇÕES-->
-                <div class="notification-button def-btn">
-                    <a href="notification.html">
-                        <button id="notification-button"><span class="fa-regular fa-bell"></span></button>
-                    </a>
-                </div>
-                <!--BOTÃO PERFIL-->
-                <div class="profile-button def-btn">
-                        <button id="profile-button"><span class="fa-solid fa-user"></span></button>
-                </div>
-                <!--BOTÃO NOVO PROJETO-->
-                <div class="new-project-button">
-                    <a href="new-project-page.html"><span class="fa-solid fa-plus"></span></a>
-                </div>
-            </div>
+      <div class="header-content">
+        <div class="header-left-side">
+          <div class="home-button">
+            <a href="./home.php">
+              <img
+                src="./src/img/icons/logo1.png"
+                alt="Logo Folium"
+                class="home-button-icon"
+                height="60px"
+              />
+            </a>
+          </div>
+          <div class="search-bar">
+            <img
+              src="./src/img/icons/lupa.png"
+              class="search-icon"
+              alt="Lupa"
+            />
+            <input type="text" placeholder="Pesquisar" />
+          </div>
         </div>
+
+        <div class="header-right-side">
+          <!-- BOTÃO DARK MODE -->
+          <div class="dark-mode-toggle def-btn">
+            <button id="dark-mode-button" onclick="toggleDarkMode()">
+              <span class="fa-solid fa-moon"></span>
+            </button>
+          </div>
+
+          <!-- BOTÃO AJUDA -->
+          <div class="help-button def-btn">
+            <a href="help.html">
+              <button id="help-button">
+                <span class="fa-solid fa-question"></span>
+              </button>
+            </a>
+          </div>
+
+          <!-- BOTÃO CONFIG -->
+          <div class="config-button def-btn">
+            <a href="config.html">
+              <button id="config-button">
+                <span class="fa-solid fa-gear"></span>
+              </button>
+            </a>
+          </div>
+
+          <!-- BOTÃO NOTIFICAÇÕES -->
+          <div class="notification-button def-btn">
+            <a href="notification.html">
+              <button id="notification-button">
+                <span class="fa-regular fa-bell"></span>
+              </button>
+            </a>
+          </div>
+
+          <!-- BOTÃO PERFIL -->
+          <div class="profile-button def-btn">
+            <button id="profile-button">
+              <span class="fa-solid fa-user"></span>
+            </button>
+          </div>
+
+          <!-- BOTÃO NOVO PROJETO -->
+          <div class="new-project-button">
+            <a href="new-project-page.html">
+              <span class="fa-solid fa-plus"></span>
+            </a>
+          </div>
+        </div>
+      </div>
     </header>
-    <!--MENU DROPDOWN-->
+
+    <!-- MENU DROPDOWN -->
     <section class="dropdown-menu-section">
-        <div class="dropdown-menu hidden" id="notification-dropdown-menu">
-            oii oque isso aqui faz?
-        </div>
-        <div class="dropdown-menu hidden" id="profile-dropdown-menu">
-            <ul>
-                <?php if (isset($_SESSION['user_nome'])): ?>
-                    <li id="user-name">
-                        <a href="profile-page.php?id=<?php echo $_SESSION['user_id']; ?>">
-                        <li id="user-name"><strong><?php echo htmlspecialchars($_SESSION['user_nome']); ?></strong></li>
-                        </a>
-                    </li>
-                    <li><a href="php/logout.php">Sair</a></li>
-                <?php else: ?>
-                    <li><a href="register-page.html">Registrar</a></li>
-                    <li><a href="index.html">Entrar</a></li>
-                <?php endif; ?>
-            </ul>
-        </div>
+      <div class="dropdown-menu hidden" id="notification-dropdown-menu">
+        oii oque isso aqui faz?
+      </div>
+
+      <div class="dropdown-menu hidden" id="profile-dropdown-menu">
+        <ul>
+          <?php if (isset($_SESSION['user_nome'])): ?>
+          <li id="user-name">
+            <a href="profile-page.php?id=<?php echo $_SESSION['user_id']; ?>">
+              <strong>
+                <?php echo htmlspecialchars($_SESSION['user_nome']); ?>
+              </strong>
+            </a>
+          </li>
+          <li><a href="php/logout.php">Sair</a></li>
+          <?php else: ?>
+          <li><a href="register-page.html">Registrar</a></li>
+          <li><a href="index.html">Entrar</a></li>
+          <?php endif; ?>
+        </ul>
+      </div>
     </section>
+
     <main>
-        <div class="main-content">
-            <div class="main-left">
-                <div class="main-header">
-                    <div class="main-header-content">
-                        <span class="main-header-text">NOME DO PROJETO</span>
-                        <button><span class="fa-solid fa-ellipsis-vertical"></span></button>
-                    </div>
-                </div>
-                <section class="project-steps">
-                    <div class="step">
-                        <div class="step-header">
-                            <div class="step-header-text">
-                                <span class="step-name">NOME DA ETAPA</span>
-                                <span class="step-date">xx/xx/xxxx</span>
-                            </div>
-                            <div class="step-header-people">
-                                <a href="">
-                                    <span class="fa-solid fa-circle-user"></span>
-                                    <span>Pessoa 1</span>
-                                </a>
-                                <a href="">
-                                    <span class="fa-solid fa-circle-user"></span>
-                                    <span>Pessoa 2</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="section-line"></div>
-                        <div class="step-main-content">
-                            Espaço para texto.
-                        </div>
-                        <div class="section-line"></div>
-                        <div class="step-footer">
-                            <div class="step-docs">
-                                <span class="fa-solid fa-file file-icon"></span>
-                                <span class="file-text">arquivo.doc</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!--outra etapa-->
-                    <div class="step">
-                        <div class="step-header">
-                            <div class="step-header-text">
-                                <span class="step-name">NOME DA ETAPA</span>
-                                <span class="step-date">xx/xx/xxxx</span>
-                            </div>
-                                <div class="step-header-people">
-                                    <a href="profile-page.php?id=1">
-                                        <span class="fa-solid fa-circle-user"></span>
-                                        <span>Luiz Felipe</span>
-                                    </a>
-                                    <a href="perfil.php?id=27">
-                                        <span class="fa-solid fa-circle-user"></span>
-                                        <span>Maria Souza</span>
-                                    </a>
-                                </div>
-                        </div>
-                        <div class="section-line"></div>
-                        <div class="step-main-content">
-                            Espaço para texto.
-                        </div>
-                        <div class="section-line"></div>
-                        <div class="step-footer">
-                            <div class="step-docs">
-                                <span class="fa-solid fa-file file-icon"></span>
-                                <span class="file-text">arquivo.doc</span>
-                            </div>
-                        </div>
-                    </div>
+      <div class="main-content">
+        <div class="main-left">
+          <div class="main-header">
+            <div class="main-header-content">
+              <span class="main-header-text">NOME DO PROJETO</span>
+              <button>
+                <span class="fa-solid fa-ellipsis-vertical"></span>
+              </button>
             </div>
-            <!-----------------------------MENU LATERAL DIREITA------------------------------------->
-            <div class="main-right">
-                <div class="side-menu">
-                    <div class="side-menu-content">
-                        <div class="side-menu-header">
-                            <div class="menu-header-people">
-                                <a href="profile-page.php?id=1">
-                                    <span class="fa-solid fa-circle-user"></span>
-                                    <span>Luiz Felipe Calcagno</span><br>
-                                </a>
-                                <a href="">
-                                    <span class="fa-solid fa-circle-user"></span>
-                                    <span>Pessoa 2</span><br>
-                                </a>
-                                <a href="">
-                                    <span class="fa-solid fa-circle-user"></span>
-                                    <span>Pessoa 3</span><br>
-                                </a>
-                                <a href="">
-                                    <span class="fa-solid fa-circle-user"></span>
-                                    <span>Pessoa 4</span><br>
-                                </a>
-                                <a href="">
-                                    <span class="fa-solid fa-circle-user"></span>
-                                    <span>Pessoa 5</span><br>
-                                </a>
-                            </div>
-                            <div class="menu-header-date">
-                                <span>Publicado em: xx/xx/xxxx</span><br>
-                                <span>Atualizado por último em: xx/xx/xxxx</span>
-                            </div>
-                        </div>
-                        <div class="menu-desc">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lacinia et nisl posuere faucibus. 
-                            Vestibulum auctor odio at dignissim consectetur. Vestibulum in sapien eget quam tristique auctor. Vestibulum quis nunc varius, aliquet massa sed, finibus dui. Praesent varius felis sed volutpat sodales. 
-                            Sed ultricies nunc non est vehicula, at sagittis orci consequat. 
-                            Praesent ipsum ante, ultrices non tincidunt eu, bibendum at turpis. Nunc imperdiet eros a ligula laoreet, ut accumsan neque accumsan. 
-                            Sed vehicula consectetur condimentum. <br>
-                            Nulla laoreet risus quis eros pulvinar, eu volutpat urna aliquam. Nulla quis velit massa. 
-                            Cras id lacus quis velit iaculis sodales condimentum vitae purus. 
-                            Nunc eget purus nec odio scelerisque facilisis. Ut in egestas mauris. 
-                            Duis convallis lorem vel dictum convallis. Morbi nec est arcu. 
-                            Etiam sed neque porttitor, vehicula odio quis, lacinia ante. 
-                            Nunc eget mi ultricies, ultricies est quis, condimentum ante. 
-                            In massa odio, feugiat non sem ut, hendrerit molestie velit. 
-                            Donec ornare scelerisque ante, ac malesuada purus scelerisque a. 
-                            Maecenas sollicitudin libero lectus, vitae volutpat arcu finibus at. <br>
-                            Nulla sit amet sem arcu. Aliquam condimentum vehicula neque, quis aliquam mauris feugiat eget. 
-                            Suspendisse facilisis placerat nisi, eu tincidunt dui rutrum in. 
-                            Etiam porttitor sem sit amet nulla posuere venenatis. 
-                            Praesent vel odio pharetra, luctus nibh eget, cursus nisl. 
-                            Cras nec egestas nisl. 
-                            Ut posuere, odio eu convallis condimentum, leo nulla rhoncus lectus, eget luctus lacus dolor et ligula. 
-                            Pellentesque ultrices orci consectetur, consectetur magna lobortis, rutrum nisl. 
-                            Suspendisse nibh lectus, feugiat at rhoncus et, sodales vel risus. 
-                            Vestibulum non nibh tincidunt, blandit tortor nec, porta odio. 
-                            Donec nisl elit, efficitur eget maximus in, bibendum at lectus. 
-                            Nulla pellentesque lorem neque, sit amet congue risus dictum in. 
-                            Maecenas condimentum tristique elit in feugiat. <br>
-                        </div>
-                        <div class="menu-footer">
-                            <div class="menu-media-display">
-                                <div class="menu-media" style="border-radius: 15px 0 0 15px;">
-                                    <img src="" alt="">
-                                </div>
-                                <div class="menu-media">
-                                    <img src="" alt="">
-                                </div>
-                                <div class="menu-media">
-                                    <img src="" alt="">
-                                </div>
-                                <div class="menu-media menu-media-right" style="border-radius: 0 15px 15px 0;">
-                                    <span class="fa-solid fa-plus"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          </div>
+
+          <section class="project-steps">
+            <div class="step">
+              <div class="step-header">
+                <div class="step-header-text">
+                  <span class="step-name">NOME DA ETAPA</span>
+                  <span class="step-date">xx/xx/xxxx</span>
                 </div>
+                <div class="step-header-people">
+                  <a href="">
+                    <span class="fa-solid fa-circle-user"></span>
+                    <span>Pessoa 1</span>
+                  </a>
+                  <a href="">
+                    <span class="fa-solid fa-circle-user"></span>
+                    <span>Pessoa 2</span>
+                  </a>
+                </div>
+              </div>
+              <div class="section-line"></div>
+              <div class="step-main-content">Espaço para texto.</div>
+              <div class="section-line"></div>
+              <div class="step-footer">
+                <div class="step-docs">
+                  <span class="fa-solid fa-file file-icon"></span>
+                  <span class="file-text">arquivo.doc</span>
+                </div>
+              </div>
             </div>
+
+            <!-- Outra etapa -->
+            <div class="step">
+              <div class="step-header">
+                <div class="step-header-text">
+                  <span class="step-name">NOME DA ETAPA</span>
+                  <span class="step-date">xx/xx/xxxx</span>
+                </div>
+                <div class="step-header-people">
+                  <a href="profile-page.php?id=1">
+                    <span class="fa-solid fa-circle-user"></span>
+                    <span>Luiz Felipe</span>
+                  </a>
+                  <a href="perfil.php?id=27">
+                    <span class="fa-solid fa-circle-user"></span>
+                    <span>Maria Souza</span>
+                  </a>
+                </div>
+              </div>
+              <div class="section-line"></div>
+              <div class="step-main-content">Espaço para texto.</div>
+              <div class="section-line"></div>
+              <div class="step-footer">
+                <div class="step-docs">
+                  <span class="fa-solid fa-file file-icon"></span>
+                  <span class="file-text">arquivo.doc</span>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
+
+        <!----------------------------- MENU LATERAL DIREITA ------------------------------------->
+        <div class="main-right">
+          <div class="side-menu">
+            <div class="side-menu-content">
+              <div class="side-menu-header">
+                <div class="menu-header-people">
+                  <a href="profile-page.php?id=1">
+                    <span class="fa-solid fa-circle-user"></span>
+                    <span>Luiz Felipe Calcagno</span><br />
+                  </a>
+                  <a href="">
+                    <span class="fa-solid fa-circle-user"></span>
+                    <span>Pessoa 2</span><br />
+                  </a>
+                  <a href="">
+                    <span class="fa-solid fa-circle-user"></span>
+                    <span>Pessoa 3</span><br />
+                  </a>
+                  <a href="">
+                    <span class="fa-solid fa-circle-user"></span>
+                    <span>Pessoa 4</span><br />
+                  </a>
+                  <a href="">
+                    <span class="fa-solid fa-circle-user"></span>
+                    <span>Pessoa 5</span><br />
+                  </a>
+                </div>
+                <div class="menu-header-date">
+                  <span>Publicado em: xx/xx/xxxx</span><br />
+                  <span>Atualizado por último em: xx/xx/xxxx</span>
+                </div>
+              </div>
+
+              <div class="menu-desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                lacinia et nisl posuere faucibus. Vestibulum auctor odio at
+                dignissim consectetur. Vestibulum in sapien eget quam tristique
+                auctor. Vestibulum quis nunc varius, aliquet massa sed, finibus
+                dui. Praesent varius felis sed volutpat sodales. Sed ultricies
+                nunc non est vehicula, at sagittis orci consequat. Praesent
+                ipsum ante, ultrices non tincidunt eu, bibendum at turpis. Nunc
+                imperdiet eros a ligula laoreet, ut accumsan neque accumsan. Sed
+                vehicula consectetur condimentum. <br />
+                Nulla laoreet risus quis eros pulvinar, eu volutpat urna
+                aliquam. Nulla quis velit massa. Cras id lacus quis velit
+                iaculis sodales condimentum vitae purus. Nunc eget purus nec
+                odio scelerisque facilisis. Ut in egestas mauris. Duis convallis
+                lorem vel dictum convallis. Morbi nec est arcu. Etiam sed neque
+                porttitor, vehicula odio quis, lacinia ante. Nunc eget mi
+                ultricies, ultricies est quis, condimentum ante. In massa odio,
+                feugiat non sem ut, hendrerit molestie velit. Donec ornare
+                scelerisque ante, ac malesuada purus scelerisque a. Maecenas
+                sollicitudin libero lectus, vitae volutpat arcu finibus at.
+                <br />
+                Nulla sit amet sem arcu. Aliquam condimentum vehicula neque,
+                quis aliquam mauris feugiat eget. Suspendisse facilisis placerat
+                nisi, eu tincidunt dui rutrum in. Etiam porttitor sem sit amet
+                nulla posuere venenatis. Praesent vel odio pharetra, luctus nibh
+                eget, cursus nisl. Cras nec egestas nisl. Ut posuere, odio eu
+                convallis condimentum, leo nulla rhoncus lectus, eget luctus
+                lacus dolor et ligula. Pellentesque ultrices orci consectetur,
+                consectetur magna lobortis, rutrum nisl. Suspendisse nibh
+                lectus, feugiat at rhoncus et, sodales vel risus. Vestibulum non
+                nibh tincidunt, blandit tortor nec, porta odio. Donec nisl elit,
+                efficitur eget maximus in, bibendum at lectus. Nulla
+                pellentesque lorem neque, sit amet congue risus dictum in.
+                Maecenas condimentum tristique elit in feugiat. <br />
+              </div>
+
+              <div class="menu-footer">
+                <div class="menu-media-display">
+                  <div class="menu-media" style="border-radius: 15px 0 0 15px">
+                    <img src="" alt="" />
+                  </div>
+                  <div class="menu-media">
+                    <img src="" alt="" />
+                  </div>
+                  <div class="menu-media">
+                    <img src="" alt="" />
+                  </div>
+                  <div
+                    class="menu-media menu-media-right"
+                    style="border-radius: 0 15px 15px 0"
+                  >
+                    <span class="fa-solid fa-plus"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-</body>
-<script src="./js/script.js"></script>
-<script src="./js/dark-mode.js"></script>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-  const profileBtn = document.getElementById("profile-button");
-  const profileMenu = document.getElementById("profile-dropdown-menu");
+    <script src="./js/script.js"></script>
+    <script src="./js/dark-mode.js"></script>
 
-  profileBtn.addEventListener("click", function () {
-    profileMenu.classList.toggle("hidden");
-  });
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const profileBtn = document.getElementById("profile-button");
+        const profileMenu = document.getElementById("profile-dropdown-menu");
 
-  // Esconde ao clicar fora
-  document.addEventListener("click", function (event) {
-    if (!profileBtn.contains(event.target) && !profileMenu.contains(event.target)) {
-      profileMenu.classList.add("hidden");
-    }
-  });
-});
-</script>
+        profileBtn.addEventListener("click", function () {
+          profileMenu.classList.toggle("hidden");
+        });
+
+        // Esconde ao clicar fora
+        document.addEventListener("click", function (event) {
+          if (
+            !profileBtn.contains(event.target) &&
+            !profileMenu.contains(event.target)
+          ) {
+            profileMenu.classList.add("hidden");
+          }
+        });
+      });
+    </script>
+  </body>
 </html>

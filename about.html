@@ -1,28 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre - Folium</title>
-    <link rel="stylesheet" href="./src/css/global-styles.css">
-    <link rel="stylesheet" href="./src/css/about.css">
-    <link rel="stylesheet" href="./src/css/standard-header.css">
-    <link rel="stylesheet" href="./src/css/standard-footer.css">
-    <link rel="stylesheet" href="./src/css/dark-mode.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-</head>
-<body class="about-page">
+    <link rel="stylesheet" href="./src/css/global-styles.css" />
+    <link rel="stylesheet" href="./src/css/about.css" />
+    <link rel="stylesheet" href="./src/css/standard-header.css" />
+    <link rel="stylesheet" href="./src/css/standard-footer.css" />
+    <link rel="stylesheet" href="./src/css/dark-mode.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="about-page">
     <header>
       <div class="header-content">
         <div class="header-left-side">
           <div class="home-button">
             <a href="home.php">
-              <img src="./src/img/icons/logo1.png" alt="" class="home-button-icon" height="60px">
+              <img
+                src="./src/img/icons/logo1.png"
+                alt=""
+                class="home-button-icon"
+                height="60px"
+              />
             </a>
           </div>
           <div class="search-bar">
-            <img src="./src/img/icons/lupa.png" class="search-icon" alt="Lupa">
-            <input type="text" placeholder="Pesquisar">
+            <img
+              src="./src/img/icons/lupa.png"
+              class="search-icon"
+              alt="Lupa"
+            />
+            <input type="text" placeholder="Pesquisar" />
           </div>
         </div>
         <div class="header-right-side">
@@ -35,119 +47,167 @@
           <!-- BOTÃO AJUDA -->
           <div class="help-button def-btn">
             <a href="help.html">
-              <button id="help-button"><span class="fa-solid fa-question"></span></button>
+              <button id="help-button">
+                <span class="fa-solid fa-question"></span>
+              </button>
             </a>
           </div>
           <!-- BOTÃO CONFIG -->
           <div class="config-button def-btn">
             <a href="config.html">
-              <button id="config-button"><span class="fa-solid fa-gear"></span></button>
+              <button id="config-button">
+                <span class="fa-solid fa-gear"></span>
+              </button>
             </a>
           </div>
           <!-- BOTÃO NOTIFICAÇÕES -->
           <div class="notification-button def-btn">
             <a href="notification.html">
-              <button id="notification-button"><span class="fa-regular fa-bell"></span></button>
+              <button id="notification-button">
+                <span class="fa-regular fa-bell"></span>
+              </button>
             </a>
           </div>
           <!-- BOTÃO PERFIL -->
           <div class="profile-button def-btn">
-            <button id="profile-button"><span class="fa-solid fa-user"></span></button>
+            <button id="profile-button">
+              <span class="fa-solid fa-user"></span>
+            </button>
           </div>
           <!-- BOTÃO NOVO PROJETO -->
           <div class="new-project-button">
-            <a href="new-project-page.html"><span class="fa-solid fa-plus"></span></a>
+            <a href="new-project-page.html"
+              ><span class="fa-solid fa-plus"></span
+            ></a>
           </div>
         </div>
       </div>
-  </header>
+    </header>
 
-        <!--MENU DROPDOWN-->
+    <!--MENU DROPDOWN-->
     <section class="dropdown-menu-section">
-        <div class="dropdown-menu hidden" id="notification-dropdown-menu">
-            oii oque isso aqui faz?
-        </div>
-        <div class="dropdown-menu hidden" id="profile-dropdown-menu">
-            <ul>
-                <?php if (isset($_SESSION['user_nome'])): ?>
-                    <li id="user-name">
-                        <a href="profile-page.php?id=<?php echo $_SESSION['user_id']; ?>">
-                        <li id="user-name"><strong><?php echo htmlspecialchars($_SESSION['user_nome']); ?></strong></li>
-                        </a>
-                    </li>
-                    <li><a href="php/logout.php">Sair</a></li>
-                <?php else: ?>
-                    <li><a href="register-page.html">Registrar</a></li>
-                    <li><a href="index.html">Entrar</a></li>
-                <?php endif; ?>
-            </ul>
-        </div>
+      <div class="dropdown-menu hidden" id="notification-dropdown-menu">
+        oii oque isso aqui faz?
+      </div>
+      <div class="dropdown-menu hidden" id="profile-dropdown-menu">
+        <ul>
+          <?php if (isset($_SESSION['user_nome'])): ?>
+          <li id="user-name">
+            <a href="profile-page.php?id=<?php echo $_SESSION['user_id']; ?>">
+              <li id="user-name">
+                <strong
+                  ><?php echo htmlspecialchars($_SESSION['user_nome']); ?></strong
+                >
+              </li>
+            </a>
+          </li>
+          <li><a href="php/logout.php">Sair</a></li>
+          <?php else: ?>
+          <li><a href="register-page.html">Registrar</a></li>
+          <li><a href="index.html">Entrar</a></li>
+          <?php endif; ?>
+        </ul>
+      </div>
     </section>
 
-  <div class="container">
-    <section class="section card-style">
-      <h2>Sobre o Projeto</h2>
-      <p>
-        Este site foi criado como um projeto de TCC por alunos do curso técnico de Informática da ETEC Jorge Street, em São Caetano do Sul (SP), com o objetivo de oferecer um espaço moderno, acessível e funcional para a publicação e organização de portfólios de projetos.
-        A plataforma permite registrar, organizar e divulgar o desenvolvimento de projetos de qualquer tipo — sendo útil tanto para estudantes em formação, que desejam apresentar seus trabalhos desenvolvidos ao longo do curso, quanto para profissionais que buscam uma alternativa mais personalizada e independente às plataformas tradicionais.
-      </p>
-    </section>
+    <div class="container">
+      <section class="section card-style">
+        <h2>Sobre o Projeto</h2>
+        <p>
+          Este site foi criado como um projeto de TCC por alunos do curso
+          técnico de Informática da ETEC Jorge Street, em São Caetano do Sul
+          (SP), com o objetivo de oferecer um espaço moderno, acessível e
+          funcional para a publicação e organização de portfólios de projetos. A
+          plataforma permite registrar, organizar e divulgar o desenvolvimento
+          de projetos de qualquer tipo — sendo útil tanto para estudantes em
+          formação, que desejam apresentar seus trabalhos desenvolvidos ao longo
+          do curso, quanto para profissionais que buscam uma alternativa mais
+          personalizada e independente às plataformas tradicionais.
+        </p>
+      </section>
 
-    <section class="section card-style">
-      <h2>Objetivo</h2>
-      <p>
-        A proposta é permitir que qualquer pessoa possa registrar seus projetos de forma estruturada, visual e fácil de navegar — incluindo descrições, arquivos, imagens, vídeos e links.
-        É ideal para quem deseja apresentar seu trabalho de forma clara e impactante, seja para fins acadêmicos, profissionais ou pessoais.
-      </p>
-    </section>
+      <section class="section card-style">
+        <h2>Objetivo</h2>
+        <p>
+          A proposta é permitir que qualquer pessoa possa registrar seus
+          projetos de forma estruturada, visual e fácil de navegar — incluindo
+          descrições, arquivos, imagens, vídeos e links. É ideal para quem
+          deseja apresentar seu trabalho de forma clara e impactante, seja para
+          fins acadêmicos, profissionais ou pessoais.
+        </p>
+      </section>
 
-    <section class="section card-style">
-      <h2>Tecnologias Utilizadas</h2>
-      <ul>
-        <li><strong>HTML, CSS e JavaScript</strong> para estrutura, estilo e interatividade.</li>
-        <li><strong>PHP</strong> no backend para organizar os envios e postagens.</li>
-      </ul>
-    </section>
+      <section class="section card-style">
+        <h2>Tecnologias Utilizadas</h2>
+        <ul>
+          <li>
+            <strong>HTML, CSS e JavaScript</strong> para estrutura, estilo e
+            interatividade.
+          </li>
+          <li>
+            <strong>PHP</strong> no backend para organizar os envios e
+            postagens.
+          </li>
+        </ul>
+      </section>
 
-    <section class="section card-style">
-      <h2>Para quem é esta plataforma?</h2>
-      <p>
-        A plataforma foi pensada para atender tanto profissionais que desejam expor seus trabalhos de forma independente quanto alunos que estão iniciando sua carreira e ainda não possuem experiência profissional.
-        Para os estudantes, é uma forma de reunir os projetos desenvolvidos durante o curso e apresentá-los ao mercado. Para os profissionais, é uma alternativa moderna e personalizável ao GitHub e outras plataformas tradicionais.      </p>
-    </section>
+      <section class="section card-style">
+        <h2>Para quem é esta plataforma?</h2>
+        <p>
+          A plataforma foi pensada para atender tanto profissionais que desejam
+          expor seus trabalhos de forma independente quanto alunos que estão
+          iniciando sua carreira e ainda não possuem experiência profissional.
+          Para os estudantes, é uma forma de reunir os projetos desenvolvidos
+          durante o curso e apresentá-los ao mercado. Para os profissionais, é
+          uma alternativa moderna e personalizável ao GitHub e outras
+          plataformas tradicionais.
+        </p>
+      </section>
 
-    <section class="section card-style">
-      <h2>Desenvolvedores</h2>
-      <p>
-        Esta plataforma foi idealizada e desenvolvida como projeto de TCC por alunos do curso técnico de Informática da ETEC Jorge Street, em São Caetano do Sul (SP).
-        A equipe é formada por:
-        Oscar Gomes Ribeiro Silva, Theodoro Fernando de Andrade Salvador, Luiz Felipe Calcagno Baltieri, Leonardo Gomes Spinelli de Souza, Rafael Miranda Almeida, Larissa Ferreira de Souza e Mariana Melo de Souza.
-        O objetivo do grupo é deixar um legado útil para a comunidade escolar e profissional, promovendo a valorização de projetos criativos e técnicos de todos os tipos.    </section>
-  </div>
+      <section class="section card-style">
+        <h2>Desenvolvedores</h2>
+        <p>
+          Esta plataforma foi idealizada e desenvolvida como projeto de TCC por
+          alunos do curso técnico de Informática da ETEC Jorge Street, em São
+          Caetano do Sul (SP). A equipe é formada por: Oscar Gomes Ribeiro
+          Silva, Theodoro Fernando de Andrade Salvador, Luiz Felipe Calcagno
+          Baltieri, Leonardo Gomes Spinelli de Souza, Rafael Miranda Almeida,
+          Larissa Ferreira de Souza e Mariana Melo de Souza. O objetivo do grupo
+          é deixar um legado útil para a comunidade escolar e profissional,
+          promovendo a valorização de projetos criativos e técnicos de todos os
+          tipos.
+        </p>
+      </section>
+    </div>
 
-  <footer class="footer">
-        <p><strong>Folium</strong> &copy; 2025. Todos os direitos reservados.</p>
-        <a href="https://linktr.ee/folium_ejs" target="_blank">Siga-nos nas nossas redes sociais</a>
+    <footer class="footer">
+      <p><strong>Folium</strong> &copy; 2025. Todos os direitos reservados.</p>
+      <a href="https://linktr.ee/folium_ejs" target="_blank"
+        >Siga-nos nas nossas redes sociais</a
+      >
     </footer>
-</body>
+  </body>
 
-<script src="./js/script.js"></script>
-<script src="./js/dark-mode.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const profileBtn = document.getElementById("profile-button");
-  const profileMenu = document.getElementById("profile-dropdown-menu");
+  <script src="./js/script.js"></script>
+  <script src="./js/dark-mode.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const profileBtn = document.getElementById("profile-button");
+      const profileMenu = document.getElementById("profile-dropdown-menu");
 
-  profileBtn.addEventListener("click", function () {
-    profileMenu.classList.toggle("hidden");
-  });
+      profileBtn.addEventListener("click", function () {
+        profileMenu.classList.toggle("hidden");
+      });
 
-  // Esconde ao clicar fora
-  document.addEventListener("click", function (event) {
-    if (!profileBtn.contains(event.target) && !profileMenu.contains(event.target)) {
-      profileMenu.classList.add("hidden");
-    }
-  });
-});
-</script>
+      // Esconde ao clicar fora
+      document.addEventListener("click", function (event) {
+        if (
+          !profileBtn.contains(event.target) &&
+          !profileMenu.contains(event.target)
+        ) {
+          profileMenu.classList.add("hidden");
+        }
+      });
+    });
+  </script>
 </html>

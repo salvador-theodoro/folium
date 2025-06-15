@@ -28,8 +28,8 @@ body.dark-mode h3 {
 }
 
 header.dark-mode {
-    background-color: #cba6f7;
-    color: #f0f0f0;
+  background-color: #cba6f7;
+  color: #f0f0f0;
 }
 
 /* ------- DARK MODE: HEADER ------- */
@@ -79,7 +79,7 @@ body.dark-mode #profile-dropdown-menu ul li #user-name {
 }
 
 /* -----------DARK MODE: FOOTER---------- */
-body.dark-mode footer{
+body.dark-mode footer {
   background-color: #1f1f1f;
   color: #f0f0f0;
 }

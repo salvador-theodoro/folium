@@ -28,4 +28,4 @@ body {
   display: none;
 }
 
-@import url('../css/dark-mode.css');
+@import url("../css/dark-mode.css");

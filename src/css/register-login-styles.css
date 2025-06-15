@@ -15,76 +15,76 @@ body {
 
 /*----------------------------------HEADER------------------------------------*/
 
-header{
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 65px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-    position: fixed;
-    background-color: #f7f7f7;
+header {
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  position: fixed;
+  background-color: #f7f7f7;
 }
 
-.header-content{
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header-content {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.header-left-side{
-    width: 17%;
-    height: 100%;
-    display: flex;
-    align-items: center;
+.header-left-side {
+  width: 17%;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.header-logo img.logo-title{
-    margin-bottom: 12px;
+.header-logo img.logo-title {
+  margin-bottom: 12px;
 }
 
-.header-right-side{
-    width: fit-content;
-    height: 100%;
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    justify-content: space-between;
+.header-right-side {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.header-content a{
-    color: #000000;
-    text-decoration: none;
-    font-size: 15px;
+.header-content a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 15px;
 }
 
-.login-page-button{
-    padding: 7px 12px;
-    border-radius: 50px;
-    background-color: #c5c5c5;
+.login-page-button {
+  padding: 7px 12px;
+  border-radius: 50px;
+  background-color: #c5c5c5;
 }
 
-.login-page-button a{
-    color: #000;
+.login-page-button a {
+  color: #000;
 }
 
-.register-page-button{
-    padding: 7px 12px;
-    border-radius: 50px;
-    background-color: #8752D2;
-    margin-right: 15px;
+.register-page-button {
+  padding: 7px 12px;
+  border-radius: 50px;
+  background-color: #8752d2;
+  margin-right: 15px;
 }
 
 /*--------------------------MAIN--------------------------*/
 
-main{
+main {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,155 +94,155 @@ main{
   margin-top: 70px;
 }
 
-.main-content{
-    display: flex;
-    flex-direction: row;
-    gap: 250px;
-    margin-right: 150px;
+.main-content {
+  display: flex;
+  flex-direction: row;
+  gap: 250px;
+  margin-right: 150px;
 }
 
-.main-left-side{
-    width: 50%;
-    color: #fff;
+.main-left-side {
+  width: 50%;
+  color: #fff;
 }
 
-.main-left-side .span-box{
-    width: 400px;
-    margin-top: 15%;
+.main-left-side .span-box {
+  width: 400px;
+  margin-top: 15%;
 }
 
-.main-left-side span{
-    font-size: 60px;
+.main-left-side span {
+  font-size: 60px;
 }
 
-.main-right-side{
-    width: 50%;
+.main-right-side {
+  width: 50%;
 }
 
-.visit-button{
-    margin: 30px;
-    width: 250px;
-    height: 60px;
-    border: none;
-    border-radius: 50px;
-    background-color: #8752D2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.visit-button {
+  margin: 30px;
+  width: 250px;
+  height: 60px;
+  border: none;
+  border-radius: 50px;
+  background-color: #8752d2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.visit-button a{
-    color: #fff;
-    text-decoration: none;
+.visit-button a {
+  color: #fff;
+  text-decoration: none;
 }
 
-.visit-button span{
-    font-size: 20px;
+.visit-button span {
+  font-size: 20px;
 }
 
 /*---------------------CAIXA FORMULÁRIO LOGIN/REGISTRO-----------------------*/
 
-.form-box{
-    margin: 10px 25%;
-    width: 350px;
-    height: fit-content;
-    border-radius: 30px;
-    display: flex;
-    flex-direction: column;
-    padding: 5px 30px 15px 30px;
-    text-align: center;
-    background-color: #f7f7f7;
-    color: #000000;
+.form-box {
+  margin: 10px 25%;
+  width: 350px;
+  height: fit-content;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 30px 15px 30px;
+  text-align: center;
+  background-color: #f7f7f7;
+  color: #000000;
 }
 
-.form-title{
-    font-size: 25px;
-    margin-bottom: 10px;
+.form-title {
+  font-size: 25px;
+  margin-bottom: 10px;
 }
 
-.form-box form{
-    width: fit-content;
-    margin: auto;
-    text-align: left;
+.form-box form {
+  width: fit-content;
+  margin: auto;
+  text-align: left;
 }
 
-.form-box label{
-    font-size: 10px;
-    margin-left: 10px;
+.form-box label {
+  font-size: 10px;
+  margin-left: 10px;
 }
 
-.form-box input.insert{
-    width: 200px;
-    height: 25px;
-    border: none;
-    border-radius: 10px;
-    padding: 10px;
+.form-box input.insert {
+  width: 200px;
+  height: 25px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
 }
 
-.form-box form span{
-    font-size: 12px;
-    margin-left: 50px;
+.form-box form span {
+  font-size: 12px;
+  margin-left: 50px;
 }
 
-.form-box form span a{
-    margin: auto;
-    color: #000000;
+.form-box form span a {
+  margin: auto;
+  color: #000000;
 }
 
-.submit-button-box{
-    text-align: center;
-    margin-top: 10px;
+.submit-button-box {
+  text-align: center;
+  margin-top: 10px;
 }
 
-.form-box input.submit-button{
-    width: 180px;
-    height: 40px;
-    border: none;
-    border-radius: 50px;
-    color: #ffffff;
-    background-color: #8752D2;
+.form-box input.submit-button {
+  width: 180px;
+  height: 40px;
+  border: none;
+  border-radius: 50px;
+  color: #ffffff;
+  background-color: #8752d2;
 }
 
-.form-box input.submit-button:hover{
-    cursor: pointer;
+.form-box input.submit-button:hover {
+  cursor: pointer;
 }
 
-.google-button{
-    width: 180px;
-    height: 40px;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 50px;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
+.google-button {
+  width: 180px;
+  height: 40px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 50px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
 }
 
-.google-button a{
-    width: 180px;
-    height: 30px;
-    color: #000;
-    text-decoration: none;
-    font-size: 13px;
-    display: flex;
-    align-items: center;
-    margin: 5px;
-    gap: 12px;
+.google-button a {
+  width: 180px;
+  height: 30px;
+  color: #000;
+  text-decoration: none;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  gap: 12px;
 }
 
-.terms{
-    margin: auto;
-    margin-bottom: 10px;
-    width: 270px;
-    font-size: 10px;
+.terms {
+  margin: auto;
+  margin-bottom: 10px;
+  width: 270px;
+  font-size: 10px;
 }
 
-.terms a{
-    color: #000000;
+.terms a {
+  color: #000000;
 }
 
-.redirect a{
-    color: #000000;
+.redirect a {
+  color: #000000;
 }

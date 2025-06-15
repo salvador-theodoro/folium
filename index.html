@@ -1,87 +1,125 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Entrar</title>
-    <link rel="stylesheet" href="./src/css/global-styles.css">
-    <link rel="stylesheet" href="./src/css/register-login-styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./src/css/global-styles.css" />
+    <link rel="stylesheet" href="./src/css/register-login-styles.css" />
+  </head>
+
+  <body>
     <header>
-        <div class="header-content">
-            <div class="header-left-side">
-                <div class="header-logo">
-                    <img src="./src/img/icons/logo1.png" alt="" height="60px" class="logo-icon">
-                    <img src="./src/img/icons/logo2.png" alt="" width="150px" class="logo-title">
-                </div>
-            </div>
-            <div class="header-right-side">
-                <a href="about.html">Sobre</a>
-                <a href="https://linktr.ee/folium_ejs">Redes Sociais</a>
-                <div class="login-page-button">
-                    <a href="index.html">Entrar</a>
-                </div>
-                <div class="register-page-button">
-                    <a href="register-page.html">Criar conta</a>
-                </div>
-            </div>
+      <div class="header-content">
+        <div class="header-left-side">
+          <div class="header-logo">
+            <img
+              src="./src/img/icons/logo1.png"
+              alt="Ícone da logo"
+              height="60"
+              class="logo-icon"
+            />
+            <img
+              src="./src/img/icons/logo2.png"
+              alt="Título da logo"
+              width="150"
+              class="logo-title"
+            />
+          </div>
         </div>
+        <div class="header-right-side">
+          <a href="about.html">Sobre</a>
+          <a href="https://linktr.ee/folium_ejs">Redes Sociais</a>
+          <div class="login-page-button">
+            <a href="index.html">Entrar</a>
+          </div>
+          <div class="register-page-button">
+            <a href="register-page.html">Criar conta</a>
+          </div>
+        </div>
+      </div>
     </header>
+
     <main>
-        <div class="main-content">
-            <div class="main-left-side">
-                <div class="span-box">
-                    <span>Entre para explorar projetos, ou use o modo visitante</span>
-                </div>
-                <div class="visit-button">
-                    <a href="./home.php">
-                        <span>
-                            Entrar como visitante
-                        </span>
-                    </a>
-                </div>
-            </div>
-            <div class="main-right-side">
-                <div class="form-box">
-                    <div class="form-title">
-                        <img src="./src/img/icons/logo1.png" alt="" height="60px"><br>
-                        <span>Bem-vindo(a) ao Folium</span>
-                    </div>
-                    <form action="./php/login.php" method="post">
-                        <label for="email">
-                            Email: 
-                        </label><br>
-                        <input type="email" name="email" id="" placeholder="Insira seu e-mail" class="insert"><br>
-                        <label for="password">
-                            Senha: 
-                        </label><br>
-                        <input type="password" name="password" id="" placeholder="Insira sua senha" class="insert"><br>
-                        <span>
-                            <a href="">
-                                Esqueceu sua senha?
-                            </a>
-                        </span>
-                        <div class="submit-button-box">
-                            <input type="submit" name="register-submit" id="login" value="ENTRAR" class="submit-button">
-                        </div>
-                    </form>
-                    <div class="google-button">
-                        <a href="">
-                            <img src="./src/img/icons/google-icon.png" alt="" height="30px">
-                            <span>Entrar com Google</span>
-                        </a>
-                    </div>
-                    <span class="terms">
-                        Ao continuar, você concorda com os <a href="">Termos de Serviço</a> do Folium e confirma que leu nossa 
-                        <a href="">Política de Privacidade</a>. <a href="">Aviso na coleta de informações</a>.
-                    </span>
-                    <span class="redirect">
-                        Ainda não está no Folium? <a href="register-page.html">Crie sua conta</a>.
-                    </span>
-                </div>
-            </div>
+      <div class="main-content">
+        <div class="main-left-side">
+          <div class="span-box">
+            <span>Entre para explorar projetos, ou use o modo visitante</span>
+          </div>
+          <div class="visit-button">
+            <a href="./home.php">
+              <span>Entrar como visitante</span>
+            </a>
+          </div>
         </div>
+
+        <div class="main-right-side">
+          <div class="form-box">
+            <div class="form-title">
+              <img src="./src/img/icons/logo1.png" alt="Logo" height="60" />
+              <br />
+              <span>Bem-vindo(a) ao Folium</span>
+            </div>
+
+            <form action="./php/login.php" method="post">
+              <label for="email">Email:</label><br />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Insira seu e-mail"
+                class="insert"
+                required
+              /><br />
+
+              <label for="password">Senha:</label><br />
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Insira sua senha"
+                class="insert"
+                required
+              /><br />
+
+              <span><a href="#">Esqueceu sua senha?</a></span>
+
+              <div class="submit-button-box">
+                <input
+                  type="submit"
+                  name="register-submit"
+                  id="login"
+                  value="ENTRAR"
+                  class="submit-button"
+                />
+              </div>
+            </form>
+
+            <div class="google-button">
+              <a href="#">
+                <img
+                  src="./src/img/icons/google-icon.png"
+                  alt="Google"
+                  height="30"
+                />
+                <span>Entrar com Google</span>
+              </a>
+            </div>
+
+            <span class="terms">
+              Ao continuar, você concorda com os
+              <a href="#">Termos de Serviço</a> do Folium e confirma que leu
+              nossa <a href="#">Política de Privacidade</a>.
+              <a href="#">Aviso na coleta de informações</a>.
+            </span>
+
+            <span class="redirect">
+              Ainda não está no Folium?
+              <a href="register-page.html">Crie sua conta</a>.
+            </span>
+          </div>
+        </div>
+      </div>
     </main>
-</body>
+  </body>
 </html>
