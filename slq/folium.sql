@@ -32,3 +32,14 @@ CREATE TABLE perfis (
 );
 
 SELECT * FROM perfis WHERE id_usuario = 1;
+
+DELIMITER $$
+
+CREATE PROCEDURE deletar_usuario(IN usuario_id INT)
+BEGIN
+    DELETE FROM usuarios WHERE id = usuario_id;
+END$$
+
+DELIMITER ;
+
+CALL deletar_usuario(7); -- Substitua 5 pelo ID do usuário que deseja apagar
