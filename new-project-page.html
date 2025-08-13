@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Criar novo projeto</title>
+    <title>Novo Projeto</title>
     <link rel="stylesheet" href="./src/css/global-styles.css" />
-    <link rel="stylesheet" href="./src/css/home-styles.css" />
+    <link rel="stylesheet" href="./src/css/new-project-styles.css" />
     <link rel="stylesheet" href="./src/css/standard-header.css" />
     <link rel="stylesheet" href="./src/css/standard-footer.css" />
     <link rel="stylesheet" href="./src/css/dark-mode.css" />
@@ -110,14 +110,38 @@
       </div>
     </section>
 
-    <!---COLOQUE AQUI A MAIN--->
+    <main>
+      <div class="main-content">
+        <div class="main-header">
+          <span>CRIAR NOVO PROJETO</span>
+        </div>
+        <div class="project-form-box">
+          <form action="">
+            <div class="form-item">
+              <span>Nome do projeto: </span><br>
+              <input type="text" name="proj-name" id="proj-name" class="text">
+            </div><br>
+            <div class="form-item">
+              <span>Imagem do projeto: </span>
+              <input type="file" name="proj-pic" id="proj-pic" class="hidden"><br>
+              <label for="proj-pic" class="fa-solid fa-file-import"></label>
+            </div><br>
+            <div class="form-item">
+              <span>Pessoas: </span><br>
+              <input type="text" name="" id="" class="text"> <!--ainda nao sei como fazer isso aqui-->
+            </div><br>
+            <div class="form-item">
+              <span>Descrição: </span><br>
+              <textarea name="proj-desc" id="proj-desc" rows="7" cols="50" class="text"></textarea>
+            </div><br>
+            <div class="form-item" class="">
+              <input type="submit" value="Criar projeto" class="submit">
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
 
-    <footer class="footer">
-      <p><strong>Folium</strong> &copy; 2025. Todos os direitos reservados.</p>
-      <a href="https://linktr.ee/folium_ejs" target="_blank"
-        >Siga-nos nas nossas redes sociais</a
-      >
-    </footer>
   </body>
 
   <script src="./js/script.js"></script>

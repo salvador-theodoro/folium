@@ -19,6 +19,7 @@ footer {
   font-family: Arial, sans-serif;
   font-size: 14px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  bottom: 0;
 }
 
 footer a {
